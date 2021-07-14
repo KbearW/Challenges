@@ -51,3 +51,21 @@ class Solution:
                         # return 'false
                 # else:
                     # return false
+
+        stack = []
+        paren = {'[':']','{':'}','(':')'}
+        for char in s:
+            if char in ['(','[','{']: 
+                stack.append(char)
+                # print(f'{stack}')
+            else:
+                if stack:  #if list is truthy--> not empty
+                    if paren[stack[-1]] == char:  #peek
+                        stack.pop()
+
+                    else:
+                        return False
+                else:
+                    return False
+        #if the final stack is empty--> return True else False
+        return False if stack else True 
