@@ -21,7 +21,7 @@
 
 # We’ve included a file, luckynumbers.py, with a function, lucky_numbers:
 
-from random import randint 
+import random
 def lucky_numbers(n):
     """Return n unique random numbers from 1-10 (inclusive)."""
 
@@ -37,13 +37,47 @@ def lucky_numbers(n):
     # return [result] (in a list form)
 
 
-    result = set()
-    if n>1:
-        ele = randint(1,11)
-        result.add(ele)
-    result1 = [result]
-    print(result1)
+    # result = set()
+    # if n>1:
+    #     ele = randint(1,11)
+    #     result.add(ele)
+    # result1 = [result]
+    # print(result1)
 
     # What am i missing: 
     # 1. need to repeat it nth times
     # 2. the result needs to be in a list.. not a set within the list
+
+    list1 = [range(1,11)]
+    result = []
+    count = 0
+
+    # Don't need the following section bc .remove already did the trick
+    # if n == 10:
+    #     result = [x for x in range(1,11)]
+    #     print(result)
+
+    while count<n:
+        ele = random.choice(list1)
+        list1.remove(ele)
+        result.append(ele)
+        count+=1
+    print(result)
+   
+
+#    or
+#     nums = list(range(1, 11))
+#     lucky_nums = []
+
+#     for i in range(n):
+#         num = random.choice(nums)
+#         nums.remove(num)
+#         lucky_nums.append(num)
+
+#     return lucky_nums
+    # What am i missing: 
+    # 1. need to repeat it nth times--> while loop
+    # 2. the result needs to be in a list.. not a set within the list
+    # maybe change it to list
+
+    # Don't need to use randint--> use random.choice() to pick element within the list
