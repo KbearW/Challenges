@@ -15,33 +15,33 @@
 # To help with this, we’ve given you a function to determine if a year is a leap year; you may use this in your solution:
 # daysinmonth.py
 
-# def is_leap_year(year):
-#     """Is this year a leap year?
+def is_leap_year(year):
+    """Is this year a leap year?
 
-#     Every 4 years is a leap year::
+    Every 4 years is a leap year::
 
-#         >>> is_leap_year(1904)
-#         True
+        >>> is_leap_year(1904)
+        True
 
-#     Except every hundred years::
+    Except every hundred years::
 
-#         >>> is_leap_year(1900)
-#         False
+        >>> is_leap_year(1900)
+        False
 
-#     Except-except every 400::
+    Except-except every 400::
 
-#         >>> is_leap_year(2000)
-#         True
-#     """
+        >>> is_leap_year(2000)
+        True
+    """
 
-#     if year % 400 == 0:
-#         return True
+    if year % 400 == 0:
+        return True
 
-#     if year % 100 == 0:
-#         return False
+    if year % 100 == 0:
+        return False
 
-#     if year % 4 == 0:
-#         return True
+    if year % 4 == 0:
+        return True
 
 # The Input
 
@@ -73,3 +73,25 @@
 #     """How many days are there in a month?"""
 
 # This function isn’t implemented, though, so when we run daysinmonth.py, our doctests fail. Complete this function so that the doctests pass.
+
+def days_in_month(date):
+    """How many days are there in a month?"""
+
+    # Sudo:
+    # split the date into two variables, month and year based on 'space'
+    month, year = date.split(' ')
+    month = int(month)
+    year = int(year)
+    leapNumDays = {'1':'31','2':'29','3':'31','4':'30','5':'31','6':'30','7':'31','8':'31','9':'30','10':'31','11':'30','12':'31'}
+    nonLeapNumDays = {'1':'31','2':'28','3':'31','4':'30','5':'31','6':'30','7':'31','8':'31','9':'30','10':'31','11':'30','12':'31'}
+    # for year, use the leap year function: if true, Feb= 29 days, else= standard
+    if is_leap_year(year) == True:
+        print(leapNumDays[str(month)])
+    else:
+        print(nonLeapNumDays[str(month)])
+
+    # OR:
+    # if month in {1,3,5,7,8,10,12}:
+    #     return 31
+    # else:
+    #     return 30
