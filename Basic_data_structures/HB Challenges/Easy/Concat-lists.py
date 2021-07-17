@@ -25,11 +25,23 @@
 
 # Runtime:O(n^2)--> should be DRY!
 def concat_lists(list1, list2):
-    results = []
-    for item in list1:
-        if type(list1)==list:
-            results.append(item)
-    for item2 in list2:
+    # results = []
+    # for item in list1:
+    #     if type(list1)==list:
+    #         results.append(item)
+    # for item2 in list2:
+    #     if type(list2)==list:
+    #         results.append(item2)
+    # print(results)
+
+    # improved solution:
+    # just add onto list1
+    for item in list2:
         if type(list2)==list:
-            results.append(item2)
-    print(results)
+            list1.append(item)
+    print(list1)
+
+    # Sudo:
+    # check type(list1) and type(list2)
+        # if == list, append ele to results
+        # return results
