@@ -26,18 +26,27 @@
 
 # This function isn’t implemented, though, so when we run addtozero.py, we have test failures.
 
+# This solution's runtime: O(n^2)- nested for loop
 def add_to_zero(nums):
-    if len(nums)>1:
-        for i in range(len(nums)):
-            for j in range(1,len(nums[1:])+1):
-                sum = nums[i] + nums[j]
-                # print(f'num[i]: {nums[i]}')
-                # print(f'nums[j]: {nums[j]}')
-                if sum == 0:
-                    # print('True')
-                    return True
-                else:
-                    return False
-    else:
-        # print('False')
-        return False
+    # if len(nums)>1:
+    #     for i in range(len(nums)):
+    #         for j in range(1,len(nums[1:])+1):
+    #             sum = nums[i] + nums[j]
+    #             # print(f'num[i]: {nums[i]}')
+    #             # print(f'nums[j]: {nums[j]}')
+    #             if sum == 0:
+    #                 # print('True')
+    #                 return True
+    #             else:
+    #                 return False
+    # else:
+    #     # print('False')
+    #     return False
+
+    # improved solution: runtime: O(1)--> bc of set() property
+    nums = set(nums)
+    for num in nums:
+        if -num in nums:
+            return True
+        else:
+            return False
