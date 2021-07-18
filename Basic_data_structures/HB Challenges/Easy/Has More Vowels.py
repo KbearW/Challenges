@@ -32,3 +32,27 @@
 #     """Does word contain more vowels than non-vowels?"""
 
 # Implement this function.
+def has_more_vowels(word):
+    """Does word contain more vowels than non-vowels?"""
+    vowels = 'aeiou'
+    count_vowels = 0
+    count_nonvowels = 0
+
+    for char in word.lower():
+        # print(char)
+        if char in vowels:
+            # print(char)
+            count_vowels += 1
+            # print(count_vowels)
+        else:
+            count_nonvowels += 1
+
+    # print(f'vowel: {count_vowels}')
+    # print(f'nonvowel: {count_nonvowels}')
+    
+    if count_vowels == count_nonvowels:
+        return False
+    elif count_vowels > count_nonvowels:
+        return True
+    else:
+        return False
