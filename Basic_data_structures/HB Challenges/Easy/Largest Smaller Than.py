@@ -26,6 +26,22 @@
 # We’ve given you a stub function. Implement it:
 # largest_smaller_than.py
 
-# def find_largest_smaller_than(nums, xnumber):
-#     """Find largest number in sorted list that is smaller than given number."""
+def find_largest_smaller_than(nums, xnumber):
+    """Find largest number in sorted list that is smaller than given number."""
+    
+    num_list = []
 
+    if nums[0] >= xnumber:
+        print(None)
+
+    for num in nums:
+        if num < xnumber:
+            num_list.append(num)
+    
+    if len(num_list)>0:
+        print(len(num_list)-1)
+    
+
+
+# Tips
+# deal w the edge cases first- fail fast to save runtime!
