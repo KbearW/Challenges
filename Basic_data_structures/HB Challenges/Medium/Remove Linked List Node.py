@@ -53,13 +53,16 @@
 # We’ve provided a file, removellnode.py, with a stub of a function, remove_node:
 # removellnode.py
 
-# def remove_node(node):
-#     """Given a node in a linked list, remove it.
+def remove_node(node):
+    # ***DO NOT HAVE ACCESS TO OTHER NODES!!! HENCE: DELETE the next node!
+    """Given a node in a linked list, remove it.
 
-#     Remove this node from a linked list. Note that we do not have access to
-#     any other nodes of the linked list, like the head or the tail.
+    Remove this node from a linked list. Note that we do not have access to
+    any other nodes of the linked list, like the head or the tail.
 
-#     Does not return anything; changes list in place.
-#     """
-
+    Does not return anything; changes list in place.
+    """
+    while node.next:
+        node.data = node.next.data
+        node.next = node.next.next
 # However, this is unimplemented. Write it.
