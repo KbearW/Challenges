@@ -52,3 +52,4 @@ class Solution:
 # Need to setup three variables and understand what does head.next do.
 # 1.) head or current, 2.) prev, 3.) next_node
 # draw it out, think about it. 
+# for the while loop--> the last statement will some what like this.... head = next_head
