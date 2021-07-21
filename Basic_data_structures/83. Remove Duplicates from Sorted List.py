@@ -14,3 +14,20 @@
 # Input: head = [1,1,2,3,3]
 # Output: [1,2,3]
 
+# Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, val=0, next=None):
+#         self.val = val
+#         self.next = next
+        
+class Solution:
+    def deleteDuplicates(self, head: ListNode) -> ListNode:
+        curr = head
+        while (curr != None and curr.next != None):
+            if curr.next.val == curr.val:
+                curr.next = curr.next.next
+
+            else:
+                curr = curr.next
+#Note: IMPORTANT! return the orginal head and not the updated head!
+        return head
