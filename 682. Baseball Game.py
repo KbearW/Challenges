@@ -43,3 +43,34 @@
 
 # Input: ops = ["1"]
 # Output: 1
+
+class Solution:
+    def calPoints(self, ops: List[str]) -> int:
+        result = []
+        finalScore = 0
+        for index in range(0,len(ops)):
+            if ops[index] == '+':
+                result.append(result[-1]+result[-2])
+            elif ops[index] == 'C':
+                result.pop()
+            elif ops[index] == 'D':
+                result.append(result[-1]*2)
+            else:
+                result.append(int(ops[index]))
+        print(f'result: {result}')
+        for score in result:
+            finalScore += score
+            # print(f'finalScore: {finalScore}')
+        # print(finalScore)
+        return finalScore
+    
+#      Sudo:
+# loop over ops
+# if index == '+':
+# add result [-1] + result[-2]
+# elif if index == 'C':
+# result.pop()
+# elif if index == 'D':
+# result.append(result[-1])*2
+# else:
+    # result.append(int(index[-1]))
