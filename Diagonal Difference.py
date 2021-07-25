@@ -73,3 +73,10 @@
 # Difference: |4 - 19| = 15
 
 # Note: |x| is the absolute value of x
+
+def diagonalDifference(arr):
+    # Write your code here
+    # print(arr)
+    diagonal1 = sum(arr[x][x] for x in range(n))
+    diagonal2= sum(arr[x][n-1-x] for x in range(n))
+    return abs(diagonal1-diagonal2)
