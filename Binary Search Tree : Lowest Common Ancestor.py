@@ -67,3 +67,90 @@
 # LCA of
 # and is , the root in this case.
 # Return a pointer to the node.
+
+class Node:
+    def __init__(self, info): 
+        self.info = info  
+        self.left = None  
+        self.right = None 
+        self.level = None 
+
+    def __str__(self):
+        return str(self.info) 
+
+class BinarySearchTree:
+    def __init__(self): 
+        self.root = None
+
+    def create(self, val):  
+        if self.root == None:
+            self.root = Node(val)
+        else:
+            current = self.root
+         
+            while True:
+                if val < current.info:
+                    if current.left:
+                        current = current.left
+                    else:
+                        current.left = Node(val)
+                        break
+                elif val > current.info:
+                    if current.right:
+                        current = current.right
+                    else:
+                        current.right = Node(val)
+                        break
+                else:
+                    break
+
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+'''
+class Node:
+      def __init__(self,info): 
+          self.info = info  
+          self.left = None  
+          self.right = None 
+           
+
+       // this is a node of the tree , which contains info as data, left , right
+'''
+
+def lca(root, v1, v2):
+  #Enter your code here
+  while root:
+    
+    if root.info > max(v1, v2):
+        return lca(root.left, v1, v2)
+    elif root.info < min(v1, v2):
+        return lca(root.right, v1, v2)
+    else:
+        return root
+    
+# Tips: First analyze the problem, think from top down view, what's the charastric of binary tree?
+#   Note:
+#   This is a binary tree! --> need to recreate the tree manually to make sense of it.
+#   Ask: common root
+#   v is the desired node
+#   Need recursions --> Create a base case
+
+#   Sudo:
+#   Base case:
+#   While root.info:
+#   #   if root.info == v1 or v2:
+        #   return prior node
+#       else:
+#           lca(root.left, v1, v2) or lca(root.right, v1, v2)
+
+tree = BinarySearchTree()
+t = int(input())
+
+arr = list(map(int, input().split()))
+
+for i in range(t):
+    tree.create(arr[i])
+
+v = list(map(int, input().split()))
+
+ans = lca(tree.root, v[0], v[1])
+print (ans.info)
