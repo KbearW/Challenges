@@ -1,6 +1,7 @@
 # https://runestone.academy/runestone/books/published/pythonds/Trees
 # section 7.4: build a tree and learn how to use the debugger in vs code
 
+
 def BinaryTree(r):
     return [r, [], []]
 
