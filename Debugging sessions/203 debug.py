@@ -26,3 +26,5 @@ def removeElements(self, head: ListNode, key: int) -> ListNode:
     return head
         
 print(removeElements([7,7,7,7],7))
+
+# *Issue- Can't figure out what's missing in the function call. 
