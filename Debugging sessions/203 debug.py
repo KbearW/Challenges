@@ -25,4 +25,4 @@ def removeElements(self, head: ListNode, key: int) -> ListNode:
 
     return head
         
-removeElements([7,7,7,7],7)
+print(removeElements([7,7,7,7],7))
