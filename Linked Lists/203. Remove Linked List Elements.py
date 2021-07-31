@@ -29,7 +29,7 @@ class ListNode:
 
 class Solution:
     def removeElements(self, head: ListNode, val: int) -> ListNode:
-        dummy = ListNode(-1)
+        dummy = ListNode(None)
         dummy.next = head
         
         current_node = dummy
