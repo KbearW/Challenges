@@ -32,12 +32,12 @@ class Solution:
         dummy = ListNode(None)
         dummy.next = head
         
-        current_node = dummy
-        while current_node.next != None:
-            if current_node.next.val == val:
-                current_node.next = current_node.next.next
+        curr = dummy
+        while curr.next:
+            if curr.next.val == val:
+                curr.next = curr.next.next
             else:
-                current_node = current_node.next
+                curr = curr.next
                 
         return dummy.next
 
