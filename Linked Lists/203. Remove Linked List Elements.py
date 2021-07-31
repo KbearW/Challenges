@@ -29,17 +29,17 @@ class ListNode:
 
 class Solution:
     def removeElements(self, head: ListNode, val: int) -> ListNode:
-        dummy_head = ListNode(-1)
-        dummy_head.next = head
+        dummy = ListNode(-1)
+        dummy.next = head
         
-        current_node = dummy_head
+        current_node = dummy
         while current_node.next != None:
             if current_node.next.val == val:
                 current_node.next = current_node.next.next
             else:
                 current_node = current_node.next
                 
-        return dummy_head.next
+        return dummy.next
 
 # Explain:
 # Before writing any code, it's good to make a list of edge cases that we need to consider. This is so that we can be certain that we're not overlooking anything while coming up with our algorithm, and that we're testing all special cases when we're ready to test. These are the edge cases that I came up with.
