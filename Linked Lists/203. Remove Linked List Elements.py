@@ -45,6 +45,8 @@ class Solution:
                 
         return dummy.next
 
+# Q: What happen to when the last node matches key? In that case, node.next is none and will bypass the while loop
+
 # Explain:
 # Before writing any code, it's good to make a list of edge cases that we need to consider. This is so that we can be certain that we're not overlooking anything while coming up with our algorithm, and that we're testing all special cases when we're ready to test. These are the edge cases that I came up with.
 
