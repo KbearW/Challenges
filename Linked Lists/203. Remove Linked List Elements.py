@@ -29,11 +29,15 @@ class ListNode:
 
 class Solution:
     def removeElements(self, head: ListNode, val: int) -> ListNode:
+        #      Create dummy node that link to the head- benefit: bypass edge case: 1st node == key
+        # This method is looking at curr.next--> doesn't need to create new var: prev  
         dummy = ListNode(None)
         dummy.next = head
         
         curr = dummy
+        # keep running if curr.next is not none
         while curr.next:
+            # edge case #1- when .next.val matches key
             if curr.next.val == val:
                 curr.next = curr.next.next
             else:
