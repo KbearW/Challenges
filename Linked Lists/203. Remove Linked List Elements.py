@@ -21,21 +21,22 @@
 # #Note:
 # Add a dummy node to the beginning and use the normal variable as before to traverse the list.
 
+# Definition for singly-linked list.
+class ListNode:
+    def __init__(self, val=0, next=None):
+        self.val = val
+        self.next = next
+
 class Solution:
     def removeElements(self, head: ListNode, val: int) -> ListNode:
-        dummy = ListNode(None)
-        dummy.next = head
-        curr = head
-        prev = dummy
-        # prev.next = head
+        dummy_head = ListNode(-1)
+        dummy_head.next = head
         
-        while curr:
-            nextNode = curr.next
-
-            if curr.val == val:
-                prev.next = nextNode
-
+        current_node = dummy_head
+        while current_node.next != None:
+            if current_node.next.val == val:
+                current_node.next = current_node.next.next
             else:
-                prev = curr
-            curr = nextNode
-        return dummy.next
+                current_node = current_node.next
+                
+        return dummy_head.next
