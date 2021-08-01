@@ -50,3 +50,22 @@
 # Output: 1994
 # Explanation: M = 1000, CM = 900, XC = 90 and IV = 4
 
+class Solution:
+    def romanToInt(self, s: str) -> int:
+        roman_num = {'I':1, 'V':5,'X':10,'L':50,'C':100,'D':500,'M':1000}
+        result = 0
+        if s in ['IV', 'IX', 'XL','XC','CD','CM']:
+            print(f's:{s}')
+#         for unit in s:
+#             # print(roman_num[unit])
+            
+#             result += roman_num[unit]
+#             # if unit in ''
+        return result
+            
+# Pseudo code:
+# setup a dict and result
+# iterate over input- s
+# if unit in 'I','X','C'--> '-'
+
+# Issue: what's the best way to note the condition?
