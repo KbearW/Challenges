@@ -52,6 +52,20 @@
 
 class Solution:
     def romanToInt(self, s: str) -> int:
-        roman_num = {'I':1, 'V':5,'X':10,'L':50,'C':100,'D':500,'M':1000}
+        roman = {'I':1, 'V':5,'X':10,'L':50,'C':100,'D':500,'M':1000}
         result = 0
-     
+        for i in range(0,len(s)-1):
+            if roman[s[i]] < roman[s[i+1]]:
+                result -= roman[s[i]]
+            else:
+                result += roman[s[i]]
+        return result + roman[s[-1]]
+            
+# Pseudo code:
+# setup a dict and result
+# iterate over input- s
+# if unit in 'I','X','C'--> '-'
+
+# Issue: what's the best way to note the condition?
+# 1.) walk thur the base logic to get to the ideal number
+# --> string--> slicing 
