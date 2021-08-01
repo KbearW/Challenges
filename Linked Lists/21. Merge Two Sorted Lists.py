@@ -47,11 +47,14 @@ def mergeTwoLists1(self, l1, l2):
     
 # recursively    
 def mergeTwoLists2(self, l1, l2):
+    # Base case:
     if not l1 or not l2:
         return l1 or l2
+    # edge case #1
     if l1.val < l2.val:
         l1.next = self.mergeTwoLists(l1.next, l2)
         return l1
+    # edge case #2
     else:
         l2.next = self.mergeTwoLists(l1, l2.next)
         return l2
