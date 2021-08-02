@@ -45,6 +45,9 @@ class Solution:
 
         # Runtime is O(n) & space complexity is O(1)
 
+
+# Tips:
+# Ask yourself, if the result should be in any set format. if not and if answer is numbers, use the math way
 # didn't say have to solve it as a string! can do it w math way!
 
 # Note:
