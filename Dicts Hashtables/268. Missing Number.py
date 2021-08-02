@@ -32,26 +32,21 @@
 
 class Solution:
     def missingNumber(self, inputlist: List[int]) -> int:
-        # maxnum = len(nums)
-        # # print(maxnum)
-        # rangelist = []
-        # for i in range(0,len(nums)+1):
-        #     rangelist.append(i)
-        # # print(rangelist)
-        # for rangenum in rangelist:
-        #     if (rangenum not in nums):
-        #         return rangenum
-            
-        # for rangenum in range(0,len(nums)+1):
-        #     print(rangenum)
+
         list1 = [num for num in range(0,len(inputlist)+1)]
-        # print(list1)
         for num in list1:
-            # print(num)
             if num not in inputlist:
                 return num
             
 #             Runtime here is O(n^2)
+
+        n = len(nums)
+        return int(n*(n+1)/2 - sum(nums))
+
+        # Runtime is O(n) & space complexity is O(1)
+
+# didn't say have to solve it as a string! can do it w math way!
+
 # Note:
 #     n is not given
 #     n starts at 0... aka len is correct, range(0,n+1)
