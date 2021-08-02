@@ -29,3 +29,39 @@
 # Input: nums = [0]
 # Output: 1
 # Explanation: n = 1 since there is 1 number, so all numbers are in the range [0,1]. 1 is the missing number in the range since it does not appear in nums.
+
+class Solution:
+    def missingNumber(self, inputlist: List[int]) -> int:
+        # maxnum = len(nums)
+        # # print(maxnum)
+        # rangelist = []
+        # for i in range(0,len(nums)+1):
+        #     rangelist.append(i)
+        # # print(rangelist)
+        # for rangenum in rangelist:
+        #     if (rangenum not in nums):
+        #         return rangenum
+            
+        # for rangenum in range(0,len(nums)+1):
+        #     print(rangenum)
+        list1 = [num for num in range(0,len(inputlist)+1)]
+        # print(list1)
+        for num in list1:
+            # print(num)
+            if num not in inputlist:
+                return num
+            
+#             Runtime here is O(n^2)
+# Note:
+#     n is not given
+#     n starts at 0... aka len is correct, range(0,n+1)
+
+# Pesudo Code:
+# find max num
+# print out the num list- inclusive of 0 and n --> range (0,n+1)
+# check if x in numlist
+#     if not, return the num
+
+# Can simplfy it to two lines
+# check if x not in range(0,len+1):
+#     return x
