@@ -1,5 +1,16 @@
 Python build-in functions- Must know:
 
+escape--> '\'
+
+lambda --> can take any numbers of arguments but only have one expression
+ie. 
+x = lambda a: a+10
+    print(x(5)) --> 15
+
+x = lambda a, b, c : a + b + c
+print(x(5, 6, 2)) 
+
+Strings:
 word= 'i love bacon!'
 splitword = word.split('')
 newword = ' '.join(splitword)
@@ -12,6 +23,11 @@ collections.Count --> will put result in dict + count
 
 # word.startswith('xxx') --> will return boolean if the string starts with 'xxx'. it's not appliable for list
 
+removes whitespace from the beginning and end of the string:
+word.strip()
+word.replace('love','hate')
+
+
 
 # xx.sort() vs. sorted(xx)
 
@@ -20,6 +36,8 @@ sorted(xx) --> will create new list--> need a new var to hold it
 
 xx.sort(reverse = True) or xx.sort(key = sortSecond) --> will work for reverse and sort under a tuple
 # ie. [(1,2),(4,1)] --> [(4,1),(1,2)]
+
+______________________________
 
 
 # dicts:
@@ -40,7 +58,7 @@ animals.clear() <-- will empty the aaray
 
 if you want to delete an item within dict--> use del--> del animals['dog']
 
-if you want to avoid key error--> use .get--> animal.get('bear',0)
+if you want to avoid key error--> use .get--> animal.get('bear',0)  or animal.get('bear')
 
 # Copy dictionaries --> can't do animals2 = animals--> this is just a reference to ansimals array 
 # and changes made to animals will automatically be made to animals2 as well!!! 
@@ -93,3 +111,4 @@ thisdict.update({"color": "red"}) --> hisdict =	{
                                                 "year": 1964, 
                                                 "color": "red"
                                                 }
+
