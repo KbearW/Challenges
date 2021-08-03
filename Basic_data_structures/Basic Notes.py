@@ -32,6 +32,64 @@ animals.items() --> dict_items(['dog':3, 'cat':6, 'panda':10, 'fish':30])
 for animal, num in animals.items():
     print(f'{animal} count is {num}')
 
+# Remove items: pop(), popitem(), del
+animals.pop('dog')
+animals.popitem() <-- this will remove the last inserted item
+del animals['dog']  *** Noe: del can also remove the whole array
+animals.clear() <-- will empty the aaray
+
 if you want to delete an item within dict--> use del--> del animals['dog']
 
 if you want to avoid key error--> use .get--> animal.get('bear',0)
+
+# Copy dictionaries --> can't do animals2 = animals--> this is just a reference to ansimals array 
+# and changes made to animals will automatically be made to animals2 as well!!! 
+animals2 = animals.copy()
+or
+animals2 = dict(animals)
+
+# iterate over a string:
+string1 = 'geeks for geeks'
+for char in string1:
+    print(char, end = ' ')
+# g e e k s f o r g e e k s 
+
+# reversed [start:end:step]
+string1 = 'geeks'
+for char in string1[::-1]:
+    print(char, end = ' ')
+# S K E E G 
+
+for index in range(0,len(string1)):
+    print(string1[index])
+# G
+# E
+# E
+# K
+# S
+
+# Reversed
+for index in reversed(range(0,len(string1))):
+    print(string1[index])
+
+# s
+# k
+# e
+# e
+# g
+# r
+# o
+# f
+
+update an item to the dict--> use update()
+thisdict =	{
+            "brand": "Ford",
+            "model": "Mustang",
+            "year": 1964
+            }
+thisdict.update({"color": "red"}) --> hisdict =	{
+                                                "brand": "Ford",
+                                                "model": "Mustang",
+                                                "year": 1964, 
+                                                "color": "red"
+                                                }
