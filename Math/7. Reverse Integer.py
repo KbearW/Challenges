@@ -26,9 +26,21 @@
 
 class Solution:
     def reverse(self, x: int) -> int:
-        sign = 1
+        
+        # Method 1:
         if x < 0:
             sign = -1
+        else:
+            sign = 1
+        
+        # Method 2:--> 
+        # read: if [x<0] is true, the statement will return 1 (because true = 1 and false = 0)
+        # index[1] is -1 (when true)
+        # index[0] is 1 (when false)
+        # sign = -1 if x < 0 else 1 (SAME THING)
+
+        sign = [1,-1][x < 0]
+
         result = int(str(abs(x))[::-1])*sign
         if -2**31 < result < (2**31) -1:
             return result
