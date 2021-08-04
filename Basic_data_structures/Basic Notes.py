@@ -87,6 +87,7 @@ for index in range(0,len(string1)):
 # S
 
 # Reversed
+# This build in can't be use for string--> reversed('hello')--> have to use--> 'hello'[::-1]
 for index in reversed(range(0,len(string1))):
     print(string1[index])
 
@@ -112,3 +113,4 @@ thisdict.update({"color": "red"}) --> hisdict =	{
                                                 "color": "red"
                                                 }
 
+# bit_length() is a functino that can tell how many bits reqs to represent an integer in binary
