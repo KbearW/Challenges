@@ -23,3 +23,27 @@
 
 # Input: x = 0
 # Output: 0
+
+class Solution:
+    def reverse(self, x: int) -> int:
+        sign = 1
+        if x < 0:
+            sign = -1
+        result = int(str(abs(x))[::-1])*sign
+        if -2**31 < result < (2**31) -1:
+            return result
+        else:
+            return 0
+        
+    
+        
+           
+
+# Note:
+# built in function: reversed or [::-1]
+# result needs to be int
+# there's a given range for 32-bit integer--> meaning?
+
+# Pesudo code:
+    # ask- int at the end, 
+    # issue- only str can be reverse
