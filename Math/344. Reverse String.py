@@ -15,3 +15,15 @@
 # Output: ["h","a","n","n","a","H"]
 
 
+class Solution:
+    def reverseString(self, s: List[str]) -> None:
+        """
+        Do not return anything, modify s in-place instead.
+        """
+        # print(s[::-1])
+        s.reverse()
+        
+        
+# Note:
+# reversed() or [::-1] to reverse a string --> missing .reverse()
+# do not return anything.... modify s in place
