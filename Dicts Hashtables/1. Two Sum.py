@@ -23,3 +23,40 @@
 
 # Input: nums = [3,3], target = 6
 # Output: [0,1]
+
+class Solution:
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
+        seen = {}
+        
+        for i, num in enumerate (nums):
+            k = target - num
+            if k in seen: #--> O(1)
+                return [seen[k],i]
+            else:
+                seen[num] = i
+            
+# Runtime is O(n)
+
+# Note:
+# Only one answers, len of nums list is at least 2
+# 2 steps:
+# find the num within array that adds to targe
+# convt the num to index and display in a list
+
+# Pesudo Code:
+# Method #1--> O(n^2)--> brute force method
+# nested loop
+# if target-nums[n] in nums
+# iterate over the list
+# n = len(nums)+1
+    # for i in range(0,n):
+        # for j in range(1,n):
+            # if target - nums[i] == nums[j]:
+                # return [i,j]
+
+
+# Method #2--> O(n)
+# recursive method / hashmap method
+# Base case: if match, return index
+# else(itself)
+
