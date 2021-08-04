@@ -26,3 +26,31 @@
 # Output: false
 # Explanation: There is no cycle in the linked list.
 
+# Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, x):
+#         self.val = x
+#         self.next = None
+
+class Solution:
+    def hasCycle(self, head: ListNode) -> bool:
+        try:
+            curr = head
+            nextNode = head.next
+            while curr != nextNode:
+                curr = curr.next
+                nextNode = nextNode.next.next
+            return True
+        except:
+            return False
+        
+# Note: ask for Bool
+
+# if node.next is true--> true
+# else, false
+
+# Pesudo Code:
+# when len(head) == 1--> no loop
+# when len(head) >1 and .next is not none:
+# iterate over the list to make sure every node is connected to the next
+
