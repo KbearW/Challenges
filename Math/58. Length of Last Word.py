@@ -20,3 +20,19 @@
 
 # Input: s = "luffy is still joyboy"
 # Output: 6
+
+class Solution:
+    def lengthOfLastWord(self, s: str) -> int:
+        return len(s.strip().split(' ')[-1])
+        
+        
+        
+#Note:
+# Look for: the length of the last word within the string
+# random spaces everywhere--> mid string and end of string
+# return a number
+
+# Pesudo Code:
+# split(' ')
+# .strip()
+# len(s[-1])
