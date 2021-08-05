@@ -54,7 +54,9 @@ class Solution:
             else:
                 x += 1
         return len(nums)
-        
+
+# Runtime is O(n), memory is O(1)
+ 
 # Note:
 #     modify the array in place for O(1) memory--> cannot use a seperate list
 #     delete/ pop the repeated
