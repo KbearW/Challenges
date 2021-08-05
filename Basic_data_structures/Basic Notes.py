@@ -51,7 +51,7 @@ for animal, num in animals.items():
     print(f'{animal} count is {num}')
 
 # Remove items: pop(), popitem(), del
-animals.pop('dog')
+animals.pop('dog') --> animals.pop(index)
 animals.popitem() <-- this will remove the last inserted item
 del animals['dog']  *** Noe: del can also remove the whole array
 animals.clear() <-- will empty the aaray
