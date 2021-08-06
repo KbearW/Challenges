@@ -51,10 +51,13 @@ for animal, num in animals.items():
     print(f'{animal} count is {num}')
 
 # Remove items: pop(), popitem(), del
-animals.pop('dog') --> animals.pop(index)
-animals.popitem() <-- this will remove the last inserted item
+animals.pop('dog') --> animals.pop(key)--> only in dicts not list
+animals.popitem() <-- this will remove the last inserted item/ can only use in dicts NOT list
 del animals['dog']  *** Noe: del can also remove the whole array
 animals.clear() <-- will empty the aaray
+
+for list:
+xxx.pop(index) is okay
 
 if you want to delete an item within dict--> use del--> del animals['dog']
 
@@ -131,5 +134,14 @@ ie. A= ['apple']
     print(A.append('banana')) --> None
 
 ie. A= ['apple']
-    A += 'banana'
+    A += ['banana']
     print(A)--> ['apple','banana']
+
+can use extend() to combine two list into one:
+A = ['A','B','C']
+B = ['X','Y','Z']
+A.extend(B)--> A = ['A','B','C','X','Y','Z']
+
+# in here, bc B is a list itself, by using the append function, it will attach the whole list to the end
+if used A.append(B)--> A = ['A','B','C', ['X','Y','Z']]
+
