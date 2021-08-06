@@ -21,6 +21,7 @@
 
 class Solution:
     def containsDuplicate(self, nums: List[int]) -> bool:
+# Method #1
         counter = collections.Counter(nums)
         # print(counter.values())
         for num, count in counter.items():
@@ -28,6 +29,13 @@ class Solution:
             if count >= 2:
                 return True
         return False
+
+# Method #2:
+        if len(nums)> len(set(nums)):
+            return True
+        else:
+            return False
+        
     
 # Pseudo Code:
 #     use collections.Counter built in function to put all items in a dicts
