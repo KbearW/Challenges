@@ -32,17 +32,17 @@
 #         self.val = x
 #         self.next = None
 
-class Solution:
-    def hasCycle(self, head: ListNode) -> bool:
-        try:
-            curr = head
-            nextNode = head.next
-            while curr != nextNode:
-                curr = curr.next
-                nextNode = nextNode.next.next
-            return True
-        except:
-            return False
+# class Solution:
+#     def hasCycle(self, head: ListNode) -> bool:
+#         try:
+#             curr = head
+#             nextNode = head.next
+#             while curr != nextNode:
+#                 curr = curr.next
+#                 nextNode = nextNode.next.next
+#             return True
+#         except:
+#             return False
         
 # Note: ask for Bool
 
@@ -54,3 +54,35 @@ class Solution:
 # when len(head) >1 and .next is not none:
 # iterate over the list to make sure every node is connected to the next
 
+
+# Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, x):
+#         self.val = x
+#         self.next = None
+
+
+def hasCycle(head):
+    # slow = head
+    # fast = head.next
+    # while slow != fast:
+    #     slow = slow.next
+    #     fast = fast.next.next
+    #     return True
+
+#  Below works:
+    slow = fast = head
+    while fast and fast.next:
+        fast = fast.next.next
+        slow = slow.next
+        if slow == fast:
+            return True
+    return False
+
+hasCycle([3,2,0,-4])
+
+# Setup two variables: slow, fast -2 steps ahead
+# setup a while loop 
+# advance slow and fast 
+# if it doesn't match, return false
+# return true

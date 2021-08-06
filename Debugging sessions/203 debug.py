@@ -4,7 +4,7 @@ class ListNode:
         self.next = next
 
 
-def removeElements(self, head: ListNode, key: int) -> ListNode:
+def removeElements(head, key):
     dummy = ListNode(next = head)
     curr = head
     prev = dummy

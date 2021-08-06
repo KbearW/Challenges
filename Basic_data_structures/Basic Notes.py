@@ -23,7 +23,8 @@ collections.Count --> will put result in dict + count
 
 # word.startswith('xxx') --> will return boolean if the string starts with 'xxx'. it's not appliable for list
 
-removes whitespace from the beginning and end of the string:
+removes whitespace import builtins
+from the beginning and end of the string:
 word.strip()
 word.replace('love','hate')
 
@@ -57,7 +58,21 @@ del animals['dog']  *** Noe: del can also remove the whole array
 animals.clear() <-- will empty the aaray
 
 for list:
-xxx.pop(index) is okay
+list.pop(index) is okay
+list.insert(index,'newitem')--> return None/ can insert tuples / can't take negative index
+If you want to return the list --> use the + method
+
+
+Don't use pop with iteration, the indexing will be off bc it has been popped!
+
+a = [1,2,4]
+b = [3]
+a.append(b)
+print(a)--> [1, 2, 4, [3]]
+
+ie. a = [1,2,4]
+b = a + [3] or 3 <-- note this is can be a list
+print(b) --> [1, 2, 4, 3, 4]
 
 if you want to delete an item within dict--> use del--> del animals['dog']
 
@@ -144,4 +159,7 @@ A.extend(B)--> A = ['A','B','C','X','Y','Z']
 
 # in here, bc B is a list itself, by using the append function, it will attach the whole list to the end
 if used A.append(B)--> A = ['A','B','C', ['X','Y','Z']]
+
+# intersection/ union:
+lst1.intersection(lst2) is a builtin function for set (both ls1 and lst2)!
 
