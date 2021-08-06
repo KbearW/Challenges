@@ -114,3 +114,22 @@ thisdict.update({"color": "red"}) --> hisdict =	{
                                                 }
 
 # bit_length() is a functino that can tell how many bits reqs to represent an integer in binary
+
+XOR--> exlcusive or --> evalutates to 1 if only exactly 1 of the bits is set
+
+a | b | a ^ b
+--|---|------
+0 | 0 | 0
+0 | 1 | 1
+1 | 0 | 1
+1 | 1 | 0
+
+# .append() will print and return None bc it's modifying the list in place. --Z> infinite recursion!!
+# It's the same logic as .sort() print/return None
+# If you would like to return the list by adding item to the list, use the + method.
+ie. A= ['apple']
+    print(A.append('banana')) --> None
+
+ie. A= ['apple']
+    A += 'banana'
+    print(A)--> ['apple','banana']
