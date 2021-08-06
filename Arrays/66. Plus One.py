@@ -24,3 +24,32 @@
 
 # Input: digits = [0]
 # Output: [1]
+
+class Solution:
+    def plusOne(self, digits: List[int]) -> List[int]:
+
+        ans = []
+        sum = 0
+        result = []
+        for i, num in enumerate (digits): 
+            ans.append(num*10**(len(digits)-i-1))
+        for num in ans:
+            sum += num
+        sum += 1
+        strnum = (str(sum))
+        for char in strnum:
+            result.append(char)
+        return result
+        
+    # Runtime: O(n)
+    
+# Note:
+# Make sure you understand the Q and though about all the edge cases before start!
+# All nums are +, int
+# num in list is int
+# return whole num + 1 by digits
+
+
+# Pesudo code:
+# try 1: .join method--> can't be done bc .join method only takes str
+# try 2: iterate over the input and put in a string, then conv. it to int then +1
