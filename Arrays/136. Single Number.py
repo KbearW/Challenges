@@ -20,3 +20,15 @@
 
 # Input: nums = [1]
 # Output: 1
+
+class Solution:
+    def singleNumber(self, nums: List[int]) -> int:
+        count = collections.Counter(nums)
+        for num, count in count.items():
+            # print(num, count)
+            if count == 1:
+                return num
+# Ask: O(n) runtime, memory: only an extra one
+# Pesudo code:
+# iterate over the nums input
+# len= odd/even--> invalid
