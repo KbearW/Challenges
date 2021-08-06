@@ -30,3 +30,39 @@
 #     What if nums1's size is small compared to nums2's size? Which algorithm is better?
 #     What if elements of nums2 are stored on disk, and the memory is limited such that you cannot load all elements into the memory at once?
 
+class Solution:
+    def intersect(self, nums1: List[int], nums2: List[int]) -> List[int]:
+        # Method #1
+        # lst1 = collections.Counter(nums1)
+        # lst2 = collections.Counter(nums2)
+        # result = []
+        # for k,v in lst1.items():
+        #     for k2,v2 in lst2.items():
+        #         if k == k2:
+        #             mintimes = min(v, v2)
+        #             result = result + [k] * mintimes
+        # return result
+        
+        # Method #2
+        nums1, nums2 = sorted(nums1), sorted(nums2)
+        pt1 = pt2 = 0
+        res = []
+
+        while True:
+            try:
+                if nums1[pt1] > nums2[pt2]:
+                    pt2 += 1
+                elif nums1[pt1] < nums2[pt2]:
+                    pt1 += 1
+                else:
+                    res.append(nums1[pt1])
+                    pt1 += 1
+                    pt2 += 1
+            except IndexError:
+                break
+
+        return res
+# Notes:           
+# Set, Hashmap method: dicts, counter
+# iterate over the list --> slow method
+
