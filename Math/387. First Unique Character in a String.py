@@ -36,19 +36,3 @@ class Solution:
 #         add to dict w index
     
 # runtime: O(n)
-
-Method #2
-    def isAnagram(self, s: str, t: str) -> bool:
-        def helper(lst):
-            finaldict = {}
-            for char in lst:
-                if char in finaldict:
-                    finaldict[char] += 1
-                else:
-                    finaldict[char] = 1
-            return finaldict
-        
-        if helper(s) == helper(t):
-            return True
-        else:
-            return False
