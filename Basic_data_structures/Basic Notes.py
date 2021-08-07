@@ -64,6 +64,14 @@ If you want to return the list --> use the + method
 
 
 Don't use pop with iteration, the indexing will be off bc it has been popped!
+ie.
+l=[1,2,3,0,0,1]
+for i in range(0,len(l)):
+       if l[i]==0:
+           l.pop(i)
+
+# instead do this -->list comprehension!:
+l = [x for x in l if x != 0]
 
 a = [1,2,4]
 b = [3]
@@ -90,7 +98,8 @@ for char in string1:
     print(char, end = ' ')
 # g e e k s f o r g e e k s 
 
-# reversed [start:end:step]
+# reverse
+#string[::-1] [start:end:step] || return will be none bc this method modify in-place
 string1 = 'geeks'
 for char in string1[::-1]:
     print(char, end = ' ')
