@@ -18,3 +18,21 @@
 
 # Input: s = "aabb"
 # Output: -1
+class Solution:
+    def firstUniqChar(self, s: str) -> int:
+        counter = collections.Counter(s)
+        for i, char in enumerate(s):
+            if counter[char] == 1:
+                return i
+            
+        return -1
+            
+# Note:
+#     Goal:
+#         return the index of the first unique char within the string
+#             if doesn't exist--> -1
+# Pesudo code:
+#     iterate over the string w enumerate 
+#         add to dict w index
+    
+# runtime: O(n)
