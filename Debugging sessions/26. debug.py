@@ -8,8 +8,8 @@ def removeDuplicates(nums):
         if nums[i] != nums[prev]:  #nums[1] != nums[0]
             prev += 1  #nums[1]
             nums[prev] = nums[i]  #reassign: nums[1] = nums[1]
-    print(len(nums))
-    print(nums)
+    # print(len(nums))
+    # print(nums)
     print(prev +1 )
     return prev+1
 
