@@ -32,3 +32,11 @@ class Solution:
 # Pesudo code:
 # iterate over the nums input
 # len= odd/even--> invalid
+
+        # Method #2- O(1)--> XOR --> 0*0 = 0 |1*1 = 0, b/c of this property, when iterating, can easily spot the leftover. If unclear, watch a video on XOR.
+        
+        values = 0
+        for num in nums:
+            values ^= num
+        
+        return values
