@@ -27,23 +27,37 @@
 
 class Solution:
     def plusOne(self, digits: List[int]) -> List[int]:
-
-        ans = []
-        sum = 0
-        result = []
-        for i, num in enumerate (digits): 
-            ans.append(num*10**(len(digits)-i-1))
-        for num in ans:
-            sum += num
-        sum += 1
-        strnum = (str(sum))
-        for char in strnum:
-            result.append(char)
-        return result
+        # Method #1
+        # ans = []
+        # sum = 0
+        # result = []
+        # for i, num in enumerate (digits): 
+        #     ans.append(num*10**(len(digits)-i-1))
+        # for num in ans:
+        #     sum += num
+        # sum += 1
+        # strnum = (str(sum))
+        # for char in strnum:
+        #     result.append(char)
+        # return result
         
     # Runtime: O(n)
-    
+        # Method #2
+        dig_len = len(digits)
+        for i in reversed(range(dig_len)):
+            digits[i] += 1
+            if digits[i] < 10:  #range(0,9)
+                print(digits[i])
+                return digits
+            else:  #99  |  90  |  00--> will loop thur twice for #99 then add 1 at the beginning
+                digits[i] = 0
+        #100
+        # if digits[0] == 0:
+        digits.insert(0,1)
+        print(digits)
+        return digits
 # Note:
+# when last dig is 9, there will be an overflow.. how to deal w it
 # Make sure you understand the Q and though about all the edge cases before start!
 # All nums are +, int
 # num in list is int
