@@ -70,7 +70,7 @@ def hasCycle(head):
         slow = slow.next
         if slow == fast:
             return True
-    return False 
+    return False  
 
 hasCycle([3,2,0,-4])
 
