@@ -63,13 +63,6 @@
 
 
 def hasCycle(head):
-    # slow = head
-    # fast = head.next
-    # while slow != fast:
-    #     slow = slow.next
-    #     fast = fast.next.next
-    #     return True
-
 #  Below works:
     slow = fast = head
     while fast and fast.next:
