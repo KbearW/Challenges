@@ -51,7 +51,6 @@ class Solution:
             # print(nums)
             return prev+1
 
-            return len(nums)
             
 # Note:
 #    remove dups and return the len of the final list
