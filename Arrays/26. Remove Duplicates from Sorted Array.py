@@ -39,39 +39,26 @@
 # Output: 5, nums = [0,1,2,3,4,_,_,_,_,_]
 # Explanation: Your function should return k = 5, with the first five elements of nums being 0, 1, 2, 3, and 4 respectively.
 # It does not matter what you leave beyond the returned k (hence they are underscores).
-
 class Solution:
     def removeDuplicates(self, nums: List[int]) -> int:
-        
-        # for i in nums:
-        #     for j in nums:
-        #         if i == j:
-        #             nums.pop(j)
-        x = 1
-        while x < len(nums):  # [1,1,2]--> len = 3
-            if nums[x] == nums[x-1]:
-                nums.pop(x)
-            else:
-                x += 1
-        return len(nums)
+        prev = 0
+        while prev < len(nums):
+            for i in range(1,len(nums)):
+                if nums[i] != nums[prev]:  #nums[1] != nums[0]
+                    prev += 1  #nums[1]
+                    nums[prev] = nums[i]  #reassign: nums[1] = nums[1]
+            # print(len(nums))
+            # print(nums)
+            return prev+1
 
-# Runtime is O(n), memory is O(1)
- 
+            return len(nums)
+            
 # Note:
-#     modify the array in place for O(1) memory--> cannot use a seperate list
-#     delete/ pop the repeated
-#     num array is sorted--> num[i] == num[i+1] 
+#    remove dups and return the len of the final list
+# use two pointer approach. 
+#     end end result of nums is [1,2,3,4,3,4,4] and we only need to worry about the non repeat
+# so only return prev + 1, if unclear, use the debugger, this is a two pointer approach.
     
-# Pesudo Code:
-#    iterate over the array-- len method:
-#       if statement if curr == next:
-#           pop(i) in place
-#     return array
-
-# Q: What's a two pointer approach? --> 
-# 1.) nested loop with i and j 
-# 2.) setup a fixed pointer--> think about linked list concept. can't look into the next num bc it doesn't have .next method, but can setup a seperate pointer to start looking at the next position--> x = 1
-
-# How to get ride of the out of index range error msg:
-# First, look at the # of element and range(), it's mostlikly due to 0 indexing count 
-# By setting up a dummy fixed variable and iterate over the list.
+# Pseudo code:
+    
+        
