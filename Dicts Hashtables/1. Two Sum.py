@@ -60,3 +60,13 @@ class Solution:
 # Base case: if match, return index
 # else(itself)
 
+
+# issue:
+# what to do with this example
+# Input: [3,2,4]
+# 6
+# Output: [0,0]
+# Expected: [1,2]
+# Stdout: {3: 0, 2: 1, 4: 2}
+
+# Solution: find ways to not use range(1,len(nums))
