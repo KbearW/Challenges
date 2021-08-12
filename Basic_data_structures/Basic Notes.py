@@ -24,7 +24,7 @@ collections.Count --> will put result in dict + count
 # word.startswith('xxx') --> will return boolean if the string starts with 'xxx'. it's not appliable for list
 
 removes whitespace import builtins
-from the beginning and end of the string:
+from the beginning and end of the string: 
 word.strip()
 word.replace('love','hate')  
 
