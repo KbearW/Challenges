@@ -27,3 +27,28 @@
 # Input: haystack = "", needle = ""
 # Output: 0
 
+class Solution:
+    def strStr(self, haystack: str, needle: str) -> int:
+        # with built in function
+        # return haystack.find(needle)
+    
+        # method #2
+        # # edge cases:
+        # if len(needle)==0:
+        #     return 0
+        # for i in range(len(haystack)):
+        #     if haystack[i: i+len(needle)] == needle:
+        #         return i
+        # return -1
+        
+        # Method #3
+        if len(needle)==0:
+            return 0
+        for i in range(len(haystack) - len(needle) + 1):
+            if haystack[i: i+len(needle)] == needle:
+                return i
+        return -1
+    
+    # Method 2 & 3: Time complexity: O(n)
+        
+# two pointer approach
