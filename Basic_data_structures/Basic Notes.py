@@ -26,7 +26,7 @@ collections.Count --> will put result in dict + count
 removes whitespace import builtins
 from the beginning and end of the string:
 word.strip()
-word.replace('love','hate')
+word.replace('love','hate') 
 
 
 
