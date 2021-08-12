@@ -3,7 +3,7 @@ def rotate(nums, k):
     Do not return anything, modify nums in-place instead.
     """
     # method #1
-    # in case k > nums
+    # in case k > nums and it goes in a loop
     k = k % len(nums)
     
     def rev(start,end):
@@ -13,9 +13,11 @@ def rotate(nums, k):
             end -= 1
             
     nums.reverse()
+    # k-1 due to zero base indexing
     rev(0, k-1)
     rev(k, len(nums)-1)
-    
+
+rotate([1,2,3,4,5],3)
         
 # Steps:
 # reverse the whole array
