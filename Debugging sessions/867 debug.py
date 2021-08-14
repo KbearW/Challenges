@@ -4,10 +4,12 @@ def rotate(matrix):
     res = []
     
     for i in range(len(matrix[0])):
-#             create the answer range bc the input range can be [3 x2] and not n x n
+#             create the new row bc the input range can be [3 x2] 
+#             and not n x n so we need to create new rows for new data
         newRow = []
         for j in range(len(matrix)):
-            # append the new items to a new list... more memory...
+            # append the new items to a new list... 
+            # use more memory... but the Q didn't ask for O(1) space
             newRow.append(matrix[j][i])
         res.append(newRow)
     
