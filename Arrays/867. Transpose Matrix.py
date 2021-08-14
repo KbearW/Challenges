@@ -16,4 +16,7 @@
 # Input: matrix = [[1,2,3],[4,5,6]]
 # Output: [[1,4],[2,5],[3,6]]
 
- 
+def rotate(A):
+    return list(zip(*A))
+
+rotate([[1,2,3],[4,5,6],[7,8,9]])
