@@ -3,13 +3,18 @@ def rotate(matrix):
     cols = len(matrix[0])
     res = []
     
-    for i in range(cols):
-#             create the answer range
+    for i in range(len(matrix[0])):
+#             create the answer range bc the input range can be [3 x2] and not n x n
         newRow = []
-        for j in range(rows):
+        for j in range(len(matrix)):
+            # append the new items to a new list... more memory...
             newRow.append(matrix[j][i])
         res.append(newRow)
+    
     return res
+    
+    # Method #2:
+    # return [[A[i][j] for i in range(len(A))] for j in range(len(A[0]))]
 
 print(rotate([[1,2,3],[4,5,6],[7,8,9]]))
 
