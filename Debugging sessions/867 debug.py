@@ -1,15 +1,15 @@
-def rotate(A):
-
-    R = len(A)
-    C = len(A[0])
-    transpose = []
-    for c in range(C):
+def rotate(matrix):
+    rows = len(matrix)
+    cols = len(matrix[0])
+    res = []
+    
+    for i in range(cols):
+#             create the answer range
         newRow = []
-        for r in range(R):
-            newRow.append(A[r][c])
-        transpose.append(newRow)
-    return transpose
-    # return list(zip(*A))
+        for j in range(rows):
+            newRow.append(matrix[j][i])
+        res.append(newRow)
+    return res
 
 print(rotate([[1,2,3],[4,5,6],[7,8,9]]))
 
