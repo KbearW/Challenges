@@ -44,17 +44,34 @@
 
 class Solution:
     def isValidSudoku(self, board: List[List[str]]) -> bool:
-        rows  = [set() for _ in range(9)]
-        cols  = [set() for _ in range(9)]
-        dices = [[set() for _ in range(3)] for _ in range(3)]
+        # rows  = [set() for _ in range(9)]
+        # cols  = [set() for _ in range(9)]
+        # dices = [[set() for _ in range(3)] for _ in range(3)]
 
-        for i in range(9):
-            for j in range(9):
-                e = board[i][j]
-                if e == '.': continue
-                if e in rows[i] or e in cols[j] or e in dices[i//3][j//3]: 
+        # for i in range(9):
+        #     for j in range(9):
+        #         e = board[i][j]
+        #         if e == '.': continue
+        #         if e in rows[i] or e in cols[j] or e in dices[i//3][j//3]: 
+        #             return False
+        #         rows[i].add(e)
+        #         cols[j].add(e)
+        #         dices[i//3][j//3].add(e)
+        # return True 
+
+                cols = collections.defaultdict(set)
+        rows = collections.defaultdict(set)
+        squares = collections.defaultdict(set)
+        
+        for r in range(9):
+            for c in range(9):
+                if board[r][c] == ".":
+                    continue
+                if (board[r][c] in rows[r] or
+                    board[r][c] in cols[c] or
+                    board[r][c] in squares[(r//3, c//3)]):
                     return False
-                rows[i].add(e)
-                cols[j].add(e)
-                dices[i//3][j//3].add(e)
-        return True 
+                cols[c].add(board[r][c])
+                rows[r].add(board[r][c])
+                squares[(r//3, c//3)].add(board[r][c])
+        return True
