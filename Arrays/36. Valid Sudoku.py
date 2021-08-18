@@ -57,4 +57,4 @@ class Solution:
                 rows[i].add(e)
                 cols[j].add(e)
                 dices[i//3][j//3].add(e)
-        return True
+        return True 
