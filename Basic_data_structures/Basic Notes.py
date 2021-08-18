@@ -172,3 +172,7 @@ if used A.append(B)--> A = ['A','B','C', ['X','Y','Z']]
 # intersection/ union:
 lst1.intersection(lst2) is a builtin function for set (both ls1 and lst2)!
 
+# Modulo operation:
+# look for the remainder
+# 25 / 7 = 3 ... 4
+# 25 mod 7 = 4 --> the remainder of the prior line
