@@ -99,12 +99,31 @@ for char in string1:
     print(char, end = ' ')
 # g e e k s f o r g e e k s 
 
-# reverse
-#string[::-1] [start:end:step] || return will be none bc this method modify in-place
+# .reverse or string[::-1] [start:end:step] || return will be none bc this method modify IN-PLACE!!!
 string1 = 'geeks'
 for char in string1[::-1]:
     print(char, end = ' ')
 # S K E E G 
+
+# OR reversed()
+# Access the element within the list, create a reversed copy of the list but it's pointing to the same underlying 
+# list and not a copy of that. For example:
+
+>>> fruits = ["apple", "banana", "orange"]
+
+>>> reversed_fruit = reversed(fruits)  # Get the iterator
+>>> fruits[-1] = "kiwi"  # Modify the last item
+>>> next(reversed_fruit)  # The iterator sees the change
+'kiwi'
+
+# If you need to get a copy of fruits using reversed(), then you can call list():
+>>> fruits = ["apple", "banana", "orange"]
+
+>>> list(reversed(fruits))
+['orange', 'banana', 'apple']
+
+
+
 
 for index in range(0,len(string1)):
     print(string1[index])
@@ -178,7 +197,7 @@ lst1.intersection(lst2) is a builtin function for set (both ls1 and lst2)!
 # 25 / 7 = 3 ... 4
 # 25 mod 7 = 4 --> the remainder of the prior line
 
-# Dict/ hashtable--> O(1) complexity 
+# Dict/ hashtable--> 'in' operation is O(1) complexity  |  list 'in' operationi s O(n)
 # map() create a new, empty map. returns an empty map Collection
 # put(key,val) add a new k/v pair to the map. if the key is already in the map then replace the old 
 # val w new val.

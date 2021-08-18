@@ -61,6 +61,9 @@ class Solution:
 
         # using hashset here bc it will store unique values in a set
         # WAY faster than a list, hashset is O(1)
+        # set is ideally the same as hashset
+        # BUT set is not subscriptable
+        # and hashset is subscriptable
         cols = collections.defaultdict(set)
         rows = collections.defaultdict(set)
         squares = collections.defaultdict(set)
