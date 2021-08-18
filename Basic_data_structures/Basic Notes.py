@@ -193,4 +193,4 @@ lst1.intersection(lst2) is a builtin function for set (both ls1 and lst2)!
 
 # Hashable: k/v pair, not allow null for both key and value, no order, slow, synchronized
 # Hashmap: k/v pair, allow null for both key and value, no order, fast, not synchronized
-# Hashset: values only, use .add method, can use contain method--> x in hashset, unique values only
+# Hashset aka set: values only, use .add method, can use contain method--> x in hashset, unique values only

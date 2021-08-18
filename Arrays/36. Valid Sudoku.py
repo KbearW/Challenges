@@ -59,18 +59,26 @@ class Solution:
         #         dices[i//3][j//3].add(e)
         # return True 
 
-                cols = collections.defaultdict(set)
+        # using hashset here bc it will store unique values in a set
+        # WAY faster than a list, hashset is O(1)
+        cols = collections.defaultdict(set)
         rows = collections.defaultdict(set)
         squares = collections.defaultdict(set)
         
         for r in range(9):
             for c in range(9):
+                # if it's empty, keep going
                 if board[r][c] == ".":
                     continue
+                # r and c ranges from 0-8 and 
                 if (board[r][c] in rows[r] or
                     board[r][c] in cols[c] or
+                    # check to see if the num is in the innersquare, 
+                    # it can be view as int(r//3) and int(c//3) so the innersquare box range is 
+                    # (0,1,2) rather than (0-8)
                     board[r][c] in squares[(r//3, c//3)]):
                     return False
+                # if the item "board[r][c] is not in the set, add to the set
                 cols[c].add(board[r][c])
                 rows[r].add(board[r][c])
                 squares[(r//3, c//3)].add(board[r][c])
