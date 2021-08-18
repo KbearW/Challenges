@@ -24,6 +24,7 @@ collections.Count --> will put result in dict + count
 # word.startswith('xxx') --> will return boolean if the string starts with 'xxx'. it's not appliable for list
 
 removes whitespace import builtins
+from typing import Collection, Hashable
 from the beginning and end of the string: 
 word.strip()
 word.replace('love','hate')  
@@ -176,3 +177,20 @@ lst1.intersection(lst2) is a builtin function for set (both ls1 and lst2)!
 # look for the remainder
 # 25 / 7 = 3 ... 4
 # 25 mod 7 = 4 --> the remainder of the prior line
+
+# Dict/ hashtable--> O(1) complexity 
+# map() create a new, empty map. returns an empty map Collection
+# put(key,val) add a new k/v pair to the map. if the key is already in the map then replace the old 
+# val w new val.
+# get(key) given a key, return the value stored in the map/ None otherwise.
+# del delete the k/v pair from the map using a statement of the form del map[key].
+# len() return the number of k/v pairs stored in the map.
+
+# Think of hashtable as an array but utilize a hash method as a mean to insert it to the right 
+# position. it can have k/v pair.
+
+# Hashtable vs. Hashmap vs. Hashset
+
+# Hashable: k/v pair, not allow null for both key and value, no order, slow, synchronized
+# Hashmap: k/v pair, allow null for both key and value, no order, fast, not synchronized
+# Hashset: values only, use .add method, can use contain method--> x in hashset, unique values only
