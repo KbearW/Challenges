@@ -125,6 +125,7 @@ for char in string1[::-1]:
 
 
 
+
 for index in range(0,len(string1)):
     print(string1[index])
 # G
