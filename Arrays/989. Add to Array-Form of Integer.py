@@ -31,3 +31,28 @@
 # Input: num = [9,9,9,9,9,9,9,9,9,9], k = 1
 # Output: [1,0,0,0,0,0,0,0,0,0,0]
 # Explanation: 9999999999 + 1 = 10000000000
+
+class Solution:
+    def addToArrayForm(self, nums: List[int], k: int) -> List[int]:
+
+        res = []
+        newNum = 0
+        # print(len(nums))
+        for i in range(0,len(nums)):
+            # print(nums[i])
+            # print(nums[i]*(10**i))
+            newNum += nums[i]*(10**(len(nums)-i-1))
+        #     print({i},{newNum})
+        # print({newNum})
+        newNum += k
+        # newNum = str(newNum)
+        for char in str(newNum):
+            res.append(char)
+        return res
+            
+# declair new var res= []    
+# declair new var num = 0
+# interate num and convt to int
+# add k to the int
+# convt int to str
+# iterate over the str and put into res
