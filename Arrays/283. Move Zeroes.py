@@ -26,7 +26,7 @@ class Solution:
         Do not return anything, modify nums in-place instead.
         """
         prev = 0 
-        for i in range(len(nums)):  
+        for i in range(len(nums)):   
             if nums[i] != 0:
                 hold = nums[prev]
                 nums[prev] = nums[i]
