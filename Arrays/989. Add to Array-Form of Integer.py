@@ -50,7 +50,7 @@ class Solution:
             res.append(char)
         return res
             
-# declair new var res= []    
+# declair new var res= []     
 # declair new var num = 0
 # interate num and convt to int
 # add k to the int
