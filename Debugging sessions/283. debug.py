@@ -13,4 +13,4 @@ def moveZeroes(nums):
             prev += 1
     print(nums)
 
-moveZeroes([0,1,0,3,12])
+moveZeroes([0,1,0,3,12]) 
