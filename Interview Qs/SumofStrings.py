@@ -18,7 +18,7 @@ def sumOfStrings(a,b):
         digits[j] += int(b[j])
     print(digits)
 
-    # can be optiumize w .reduce() or .map() or lambda combination... look into it
+    # can be optiumized w .reduce() or .map() or lambda combination... look into it
     for digit in digits:
         sum = str(digit) + sum
 
