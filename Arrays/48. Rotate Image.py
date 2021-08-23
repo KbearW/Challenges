@@ -25,11 +25,30 @@
         
         # A[:] = zip(*A[::-1])
         # return A
-        
         # Method 2
+        # A.reverse()
+        # print(A)
+        # for i in range(len(A)):  # i = (0, 1, 2)
+        #     for j in range(i):  #j = (0 or 1)  -->range(0) --> [], range(1) --> [0], range(2) --> [0,1]
+        #         A[i][j], A[j][i] = A[j][i], A[i][j]
+        #         print(f'i:{i}, j:{j}')
+        # return A
+    
+    # first reverse the whole matrix, 
+    # then swap each number by cooridinates- nested loop
+    
+#         Method #3
+# Do not use [::-1] in this case since the prompt asks for in-place and [::-1] will create a new var
         A.reverse()
+        print(f'L24:{A}')
+        
+        for r in range(3):
+#             Note in here, it's not a nested for loop over range of len of array anymore. 
+#             It's bc we are swapping over the diagonal--> 7,5,3, so we only need to loop thur either the top right corner or the lower left corner. If you loop thur the len of array, the whole thing will be undo. 
+            for c in range(r):
+                temp = A[r][c]
+                A[r][c] = A[c][r]
+                A[c][r] = temp
+
         print(A)
-        for i in range(len(A)):
-            for j in range(i):
-                A[i][j], A[j][i] = A[j][i], A[i][j]
         return A
