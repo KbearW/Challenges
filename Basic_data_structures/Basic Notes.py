@@ -223,3 +223,5 @@ lst1.intersection(lst2) is a builtin function for set (both ls1 and lst2)!
 # .map()
 
 # lambda
+
+# collections.defaultdict--> is a special function that must know!

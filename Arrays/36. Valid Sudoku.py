@@ -44,45 +44,30 @@
 
 class Solution:
     def isValidSudoku(self, board: List[List[str]]) -> bool:
-        # rows  = [set() for _ in range(9)]
-        # cols  = [set() for _ in range(9)]
-        # dices = [[set() for _ in range(3)] for _ in range(3)]
 
-        # for i in range(9):
-        #     for j in range(9):
-        #         e = board[i][j]
-        #         if e == '.': continue
-        #         if e in rows[i] or e in cols[j] or e in dices[i//3][j//3]: 
-        #             return False
-        #         rows[i].add(e)
-        #         cols[j].add(e)
-        #         dices[i//3][j//3].add(e)
-        # return True 
-
-        # using hashset here bc it will store unique values in a set
-        # WAY faster than a list, hashset is O(1)
-        # set is ideally the same as hashset
-        # BUT set is not subscriptable
-        # and hashset is subscriptable
+        # set is an idea but it's not subscriptable due to the unordered nature of it
+        # defaultdict is a special function that create a k/v pairs when a new elem has been added
         cols = collections.defaultdict(set)
         rows = collections.defaultdict(set)
         squares = collections.defaultdict(set)
         
+        # This will first go down to check all cols first then move on to each rows
         for r in range(9):
             for c in range(9):
-                # if it's empty, keep going
                 if board[r][c] == ".":
                     continue
-                # r and c ranges from 0-8 and 
                 if (board[r][c] in rows[r] or
                     board[r][c] in cols[c] or
-                    # check to see if the num is in the innersquare, 
-                    # it can be view as int(r//3) and int(c//3) so the innersquare box range is 
-                    # (0,1,2) rather than (0-8)
                     board[r][c] in squares[(r//3, c//3)]):
                     return False
-                # if the item "board[r][c] is not in the set, add to the set
                 cols[c].add(board[r][c])
                 rows[r].add(board[r][c])
                 squares[(r//3, c//3)].add(board[r][c])
+                print(cols)
+                
+#       The end result: 9*3 = 27 hashsets
+        print(len(rows))
+        print(len(cols))
+        print(len(squares))
         return True
+    
