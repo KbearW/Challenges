@@ -221,7 +221,15 @@ lst1.intersection(lst2) is a builtin function for set (both ls1 and lst2)!
 # .reduce()
 
 # .map()--> apply same function to each element of a seq--> return the modified list
-
+# The following are the same:
+def square(lst1):
+    lst2 = []
+    for num in lst1:
+        lst2.appen(num**2)
+    return lst2
+    
+n = [4,3,2,1]
+print(list(map(lambda x:x**2,n)))
 
 # lambda--> parameter(s) before ':' and return statement after ':'
 # ie. (the same)
