@@ -220,8 +220,19 @@ lst1.intersection(lst2) is a builtin function for set (both ls1 and lst2)!
 # range(x) starts from [0,1,2,3,4,....x-1]
 # .reduce()
 
-# .map()
+# .map()--> apply same function to each element of a seq--> return the modified list
 
-# lambda
+
+# lambda--> parameter(s) before ':' and return statement after ':'
+# ie. (the same)
+def add(x,y):
+    return x+y
+lambda x,y: x+y
+
+def mx(x,y):
+    if x>y: return x
+    else: return y
+lambda x,y: x if x > y else y
+# filter
 
 # collections.defaultdict--> is a special function that must know!
