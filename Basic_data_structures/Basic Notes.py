@@ -252,6 +252,7 @@ or print(list(map(square, n)))
 # The following are the same:
 def add(x,y):
     return x+y
+    
 lambda x,y: x+y
 
 def mx(x,y):
