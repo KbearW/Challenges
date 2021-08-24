@@ -218,21 +218,21 @@ lst1.intersection(lst2) is a builtin function for set (both ls1 and lst2)!
 # MUST KNOW:
 # use temp variable 
 # range(x) starts from [0,1,2,3,4,....x-1]
-# .reduce()
+# reduce()
 
-# .map()--> apply same function to each element of a seq--> return the modified list
+# map()--> apply same function to each element of a seq--> return the modified list
 # The following are the same:
 def square(lst1):
     lst2 = []
     for num in lst1:
-        lst2.appen(num**2)
+        lst2.append(num**2)
     return lst2
-    
+
 n = [4,3,2,1]
 print(list(map(lambda x:x**2,n)))
 
 # lambda--> parameter(s) before ':' and return statement after ':'
-# ie. (the same)
+# The following are the same:
 def add(x,y):
     return x+y
 lambda x,y: x+y
@@ -241,6 +241,7 @@ def mx(x,y):
     if x>y: return x
     else: return y
 lambda x,y: x if x > y else y
+
 # filter
 
 # collections.defaultdict--> is a special function that must know!
