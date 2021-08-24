@@ -218,6 +218,7 @@ lst1.intersection(lst2) is a builtin function for set (both ls1 and lst2)!
 # MUST KNOW:
 # use temp variable 
 # range(x) starts from [0,1,2,3,4,....x-1]
+
 # reduce()--> applies same operation to items of a sequence
 # uses result of operation as first param of next operation, returns an item, not a list
 def mult(lst1):
@@ -227,9 +228,10 @@ def mult(lst1):
     return prod
 
 n = [4,3,2,1]
-print(reduce(lambda x,y: x*y, n)) 
-# return 4*3 = 12, 12*2 = 24, 24*1 = 24
-
+import functools  #this is a library
+print(functools.reduce(lambda x,y: x*y, n)) 
+# note: it's take the first two val of the list and use the result of it for the 2nd stack
+# return 4*3 = 12, 12*2 = 24, 24*1 = 24  --> 4*3*2*1 = 24
 
 # map()--> apply same function to each element of a seq--> return the modified list
 # The following are the same:
