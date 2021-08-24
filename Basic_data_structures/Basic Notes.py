@@ -220,7 +220,15 @@ lst1.intersection(lst2) is a builtin function for set (both ls1 and lst2)!
 # range(x) starts from [0,1,2,3,4,....x-1]
 # reduce()--> applies same operation to items of a sequence
 # uses result of operation as first param of next operation, returns an item, not a list
+def mult(lst1):
+    prod = lst1[0]
+    for i in range(1,len(lst2)):
+        prod *= lst1[i]
+    return prod
 
+n = [4,3,2,1]
+print(reduce(lambda x,y: x*y, n)) 
+# return 4*3 = 12, 12*2 = 24, 24*1 = 24
 
 
 # map()--> apply same function to each element of a seq--> return the modified list
@@ -248,7 +256,7 @@ def mx(x,y):
     else: return y
 lambda x,y: x if x > y else y
 
-# filter --> filter items out of a sequence
+# filter --> filter items out of a sequence, returns an item, not a list
 def over_two(lst1):
     lst2 = [x for x in lst1 if x>2]
     return lst2
