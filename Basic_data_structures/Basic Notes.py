@@ -233,6 +233,7 @@ print(functools.reduce(lambda x,y: x*y, n))
 # note: it's take the first two val of the list and use the result of it for the 2nd stack
 # return 4*3 = 12, 12*2 = 24, 24*1 = 24  --> 4*3*2*1 = 24
 
+# reduce(lambda x, y: x+y, [1, 2, 3, 4, 5]) calculates ((((1+2)+3)+4)+5)
 # map()--> apply same function to each element of a seq--> return the modified list
 # The following are the same:
 def square(lst1):
