@@ -218,7 +218,10 @@ lst1.intersection(lst2) is a builtin function for set (both ls1 and lst2)!
 # MUST KNOW:
 # use temp variable 
 # range(x) starts from [0,1,2,3,4,....x-1]
-# reduce()
+# reduce()--> applies same operation to items of a sequence
+# uses result of operation as first param of next operation, returns an item, not a list
+
+
 
 # map()--> apply same function to each element of a seq--> return the modified list
 # The following are the same:
@@ -229,7 +232,10 @@ def square(lst1):
     return lst2
 
 n = [4,3,2,1]
-print(list(map(lambda x:x**2,n)))
+print(list(map(lambda x:x**2,n)))  --> [16,9,4,1]
+or print(list(map(square, n)))
+
+# **Don't forget to cast the return items as a list! This is a must!
 
 # lambda--> parameter(s) before ':' and return statement after ':'
 # The following are the same:
@@ -242,6 +248,12 @@ def mx(x,y):
     else: return y
 lambda x,y: x if x > y else y
 
-# filter
+# filter --> filter items out of a sequence
+def over_two(lst1):
+    lst2 = [x for x in lst1 if x>2]
+    return lst2
+
+n = [4,3,2,1]
+print(list(filter(lambda x:x>2, n))) --> [4,3]
 
 # collections.defaultdict--> is a special function that must know!
