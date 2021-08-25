@@ -1,4 +1,4 @@
-def myAtoi(str):
+def myAtoi(s):
 
     s = s.strip()
     if not s:
@@ -11,7 +11,7 @@ def myAtoi(str):
     if s[0] == '-':
         sign = -1
     
-    if s[0] in "-," s[0].isnumeric():
+    if s[0].isnumeric():
         return 0
     
     for i in range(len(s)):
