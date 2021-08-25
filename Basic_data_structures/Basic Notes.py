@@ -269,3 +269,8 @@ n = [4,3,2,1]
 print(list(filter(lambda x:x>2, n))) --> [4,3]
 
 # collections.defaultdict--> is a special function that must know!
+
+.isnumeric()--> for the whole string and only string, bool
+
+n='343'
+n.isnumeric()--> true
