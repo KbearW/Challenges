@@ -13,7 +13,8 @@
 #     Return the integer as the final result.
 
 
-Solution from youtube:
+# Solution from youtube:--> run time is REALLY GOOD and WAY less complicated than my own solution. 
+# Learn how to think and do it this way!
 class Solution:
     def myAtoi(self, s: str) -> int:
         MAX_INT = 2**31-1
