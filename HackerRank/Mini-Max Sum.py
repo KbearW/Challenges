@@ -39,3 +39,34 @@
 # Sample Input
 
 # 1 2 3 4 5
+
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+
+#
+# Complete the 'miniMaxSum' function below.
+#
+# The function accepts INTEGER_ARRAY arr as parameter.
+#
+
+def miniMaxSum(arr):
+    # Write your code here
+    maxnum = sum(arr)-min(arr)
+    minnum = sum(arr)-max(arr)
+    # print(maxnum)
+    # print(minnum)
+    # mprint(sum(arr))
+    # # minsum = arr
+    # # maxsum = 
+    
+    print(minnum, maxnum)
+if __name__ == '__main__':
+
+    arr = list(map(int, input().rstrip().split()))
+
+    miniMaxSum(arr)
