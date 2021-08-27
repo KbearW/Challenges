@@ -24,3 +24,39 @@
 # plusMinus has the following parameter(s):
 
 #     int arr[n]: an array of integers
+
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+# import collections
+
+#
+# Complete the 'plusMinus' function below.
+#
+# The function accepts INTEGER_ARRAY arr as parameter.
+#
+
+def plusMinus(arr):
+    count = {'pos':0,'neg':0,'zero':0}
+    length = len(arr)
+    for x in arr:
+        if x>0:
+            count['pos'] +=1
+        if x<0:
+            count['neg'] += 1
+        if x ==0:
+            count['zero'] += 1
+    
+    for k,v in count.items():
+        print(v/length)
+
+if __name__ == '__main__':
+    n = int(input().strip())
+
+    arr = list(map(int, input().rstrip().split()))
+
+    plusMinus(arr)
