@@ -1,26 +1,26 @@
-https://www.hackerrank.com/challenges/plus-minus/problem
+# https://www.hackerrank.com/challenges/plus-minus/problem
 
-Given an array of integers, calculate the ratios of its elements that are positive, negative, and zero. Print the decimal value of each fraction on a new line with
+# Given an array of integers, calculate the ratios of its elements that are positive, negative, and zero. Print the decimal value of each fraction on a new line with
 
-places after the decimal.
+# places after the decimal.
 
-Note: This challenge introduces precision problems. The test cases are scaled to six decimal places, though answers with absolute error of up to
+# Note: This challenge introduces precision problems. The test cases are scaled to six decimal places, though answers with absolute error of up to
 
-are acceptable.
+# are acceptable.
 
-Example
-There are elements, two positive, two negative and one zero. Their ratios are , and
+# Example
+# There are elements, two positive, two negative and one zero. Their ratios are , and
 
-. Results are printed as:
+# . Results are printed as:
 
-0.400000
-0.400000
-0.200000
+# 0.400000
+# 0.400000
+# 0.200000
 
-Function Description
+# Function Description
 
-Complete the plusMinus function in the editor below.
+# Complete the plusMinus function in the editor below.
 
-plusMinus has the following parameter(s):
+# plusMinus has the following parameter(s):
 
-    int arr[n]: an array of integers
+#     int arr[n]: an array of integers
