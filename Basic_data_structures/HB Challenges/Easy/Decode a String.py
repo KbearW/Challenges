@@ -58,7 +58,7 @@
 #             append letter at location in string where skipval is located
 # return res
 
-def decode(s):
+def decode(s): 
     res = ''
     for i, char in enumerate(s):
         if char.isnumeric() == True:
