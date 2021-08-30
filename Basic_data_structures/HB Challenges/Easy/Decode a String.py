@@ -56,7 +56,7 @@
 #         convert char to int/ num
 #             take skipval and add 1
 #             append letter at location in string where skipval is located
-# return res
+# return res 
 
 def decode(s): 
     res = ''
