@@ -2,6 +2,7 @@
 
 # # pesudocode
 def is_anagram_of_palindrome(word):
+    # try #1
 #     # new var stack as array
 #     stack = []
 #     # sort input
@@ -25,6 +26,7 @@ def is_anagram_of_palindrome(word):
 #     return True
     # else return true 
 
+    # Try #2
     # iterate over input
     map = {}
     for char in word:
