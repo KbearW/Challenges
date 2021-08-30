@@ -27,3 +27,43 @@
 #     """Decode a string."""
 
 # Implement this.
+
+# def decode(s):
+#     res = ''
+#     i = 0
+
+#     while i<len(s):
+#         num_to_skip = int(s[i])
+#         i += num_to_skip +1
+#         res += s[i]
+#         i += 1
+#     return res
+
+    # for char in s:
+    #     if char.isnumeric == True:
+    #         res.append(s[char])
+                
+    # print(res)
+
+# decode("0h1ae2bcy")
+
+# split based on num?
+
+
+# res = ''
+# iterate over the input
+#     if char is number  
+#         convert char to int/ num
+#             take skipval and add 1
+#             append letter at location in string where skipval is located
+# return res
+
+def decode(s):
+    res = ''
+    for i, char in enumerate(s):
+        if char.isnumeric() == True:
+            skipval = int(char) + 1
+            res += (s[i + skipval])
+    return res
+
+print(decode('0h1ae2bcy'))
