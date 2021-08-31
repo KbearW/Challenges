@@ -29,3 +29,26 @@
 # Sample Output
 
 # Chris Alan
+
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+
+# Complete the solve function below.
+def solve(s):
+    s = s.split(' ')
+    res = []
+    for word in s: 
+        res.append(word.capitalize())
+    return ' '.join(res)
+    
+    # steps:
+    # split input s
+    # return cap of the 1st char of each word and append to res
+    # in this case, it's better not set res as string bc it's hard to conv to plain strings later w a space in btw
+    
+if __name__ == '__main__':
