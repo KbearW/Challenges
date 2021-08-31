@@ -25,3 +25,23 @@
 # Sample Output
 
 # 2
+
+def count_substring(string, sub_string):
+    count = 0
+    for i in range(len(string)):
+        # print(string[i:i+len(sub_string )])
+        # print(string[i])
+        if string[i:].startswith(sub_string):
+            count += 1
+            # print(string[i:])
+    return count 
+
+    # steps:
+    # iterate over the string
+    # for each string that starts from the ith item:
+    #     check if it matches sub_string
+    #         count ++
+    # return count 
+
+    
+if __name__ == '__main__':
