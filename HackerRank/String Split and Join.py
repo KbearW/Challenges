@@ -1,42 +1,54 @@
-https://www.hackerrank.com/challenges/python-string-split-and-join/problem?h_r=next-challenge&h_v=zen
+# https://www.hackerrank.com/challenges/python-string-split-and-join/problem?h_r=next-challenge&h_v=zen
 
-In Python, a string can be split on a delimiter.
+# In Python, a string can be split on a delimiter.
 
-Example:
+# Example:
 
->>> a = "this is a string"
->>> a = a.split(" ") # a is converted to a list of strings. 
->>> print a
-['this', 'is', 'a', 'string']
+# >>> a = "this is a string"
+# >>> a = a.split(" ") # a is converted to a list of strings. 
+# >>> print a
+# ['this', 'is', 'a', 'string']
 
-Joining a string is simple:
+# Joining a string is simple:
 
->>> a = "-".join(a)
->>> print a
-this-is-a-string 
+# >>> a = "-".join(a)
+# >>> print a
+# this-is-a-string 
 
-Task
-You are given a string. Split the string on a " " (space) delimiter and join using a - hyphen.
+# Task
+# You are given a string. Split the string on a " " (space) delimiter and join using a - hyphen.
 
-Function Description
+# Function Description
 
-Complete the split_and_join function in the editor below.
+# Complete the split_and_join function in the editor below.
 
-split_and_join has the following parameters:
+# split_and_join has the following parameters:
 
-    string line: a string of space-separated words
+#     string line: a string of space-separated words
 
-Returns
+# Returns
 
-    string: the resulting string
+#     string: the resulting string
 
-Input Format
-The one line contains a string consisting of space separated words.
+# Input Format
+# The one line contains a string consisting of space separated words.
 
-Sample Input
+# Sample Input
 
-this is a string   
+# this is a string   
 
-Sample Output
+# Sample Output
 
-this-is-a-string
+# this-is-a-string
+
+def split_and_join(line):
+    # write your code here
+    # steps:
+    # split based on white spaces
+    line = line.split(' ')
+    # print(line)
+    # join w/ '-'
+    return '-'.join(line)
+
+    
+if __name__ == '__main__':
