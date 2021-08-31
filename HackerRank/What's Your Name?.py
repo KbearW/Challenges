@@ -1,31 +1,49 @@
-https://www.hackerrank.com/challenges/whats-your-name/problem?h_r=next-challenge&h_v=zen&h_r=next-challenge&h_v=zen
+# https://www.hackerrank.com/challenges/whats-your-name/problem?h_r=next-challenge&h_v=zen&h_r=next-challenge&h_v=zen
 
-You are given the firstname and lastname of a person on two different lines. Your task is to read them and print the following:
+# You are given the firstname and lastname of a person on two different lines. Your task is to read them and print the following:
 
-    Hello firstname lastname! You just delved into python.
+#     Hello firstname lastname! You just delved into python.
 
-Function Description
+# Function Description
 
-Complete the print_full_name function in the editor below.
+# Complete the print_full_name function in the editor below.
 
-print_full_name has the following parameters:
+# print_full_name has the following parameters:
 
-    string first: the first name
-    string last: the last name
+#     string first: the first name
+#     string last: the last name
 
-Prints
+# Prints
 
-    string: 'Hello 
+#     string: 'Hello 
 
-! You just delved into python' where and are replaced with and
+# ! You just delved into python' where and are replaced with and
 
-    .
+#     .
 
-Input Format
+# Input Format
 
-The first line contains the first name, and the second line contains the last name.
+# The first line contains the first name, and the second line contains the last name.
 
-Constraints
+# Constraints
 
-The length of the first and last names are each ≤
-.
+# The length of the first and last names are each ≤
+# .
+
+#
+# Complete the 'print_full_name' function below.
+#
+# The function is expected to return a STRING.
+# The function accepts following parameters:
+#  1. STRING first
+#  2. STRING last
+#
+
+def print_full_name(first, last):
+    # Write your code here
+    
+    # steps
+    # print the statement with first, last as input
+    print(f'Hello {first} {last}! You just delved into python.')
+
+if __name__ == '__main__':
