@@ -25,23 +25,13 @@
 # Sample Output
 
 # 2
-
-def count_substring(string, sub_string):
-    count = 0
-    for i in range(len(string)):
-        # print(string[i:i+len(sub_string )])
-        # print(string[i])
-        if string[i:].startswith(sub_string):
-            count += 1
-            # print(string[i:])
-    return count 
-
-    # steps:
-    # iterate over the string
-    # for each string that starts from the ith item:
-    #     check if it matches sub_string
-    #         count ++
-    # return count 
-
-    
+def stringValidators1(s):
+    print(any([char.isalnum() for char in s]))
+    print(any([char.isalpha() for char in s]))
+    print(any([char.isdigit() for char in s]))
+    print(any([char.islower() for char in s]))
+    print(any([char.isupper() for char in s]))
+        
 if __name__ == '__main__':
+    s = input()
+    stringValidators1(s)    
