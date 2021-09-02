@@ -52,4 +52,4 @@ def solve(s):
     # in this case, it's better not set res as string bc it's hard to conv to plain strings later w a space in btw
     
 if __name__ == '__main__':
- 
+  
