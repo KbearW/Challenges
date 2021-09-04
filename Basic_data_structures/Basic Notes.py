@@ -57,7 +57,7 @@ animals.pop('dog') --> animals.pop(key)--> only in dicts not list
 animals.popitem() <-- this will remove the last inserted item/ can only use in dicts NOT list
 del animals['dog']  *** Noe: del can also remove the whole array
 animals.clear() <-- will empty the aaray  
-
+ 
 for list:
 list.pop(index) is okay
 list.insert(index,'newitem')--> return None/ can insert tuples / can't take negative index
