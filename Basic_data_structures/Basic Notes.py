@@ -59,7 +59,7 @@ del animals['dog']  *** Noe: del can also remove the whole array
 animals.clear() <-- will empty the aaray  
  
 for list: 
-list.pop(index) is okay 
+list.pop(index) is okay  
 list.insert(index,'newitem')--> return None/ can insert tuples / can't take negative index
 If you want to return the list --> use the + method
 
