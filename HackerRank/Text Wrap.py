@@ -21,7 +21,7 @@
 # Input Format
 
 # The first line contains a string,
-# .
+# . 
 # The second line contains the width,
 
 # .
