@@ -25,7 +25,7 @@
 # The second line contains the width,
 
 # .
-
+ 
 # Constraints
 
 # Sample Input 0
