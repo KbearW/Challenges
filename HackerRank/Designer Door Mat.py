@@ -47,12 +47,22 @@
 
 # Output the design pattern.
 
-# Enter your code here. Read input from STDIN. Print output to STDOUT
+# Method #1:
 n, m = input().split()
 for i in range(1, (int(n)//2)+1):
-    pattern = '.|.'*(i+i-1)  #Need something here...
+    pattern = '.|.'*(i+i-1) 
     print(pattern.center(int(m),'-'))
 print('WELCOME'.center(int(m),'-'))
 for i in range(1,(int(n)//2)+1)[::-1]:
-    pattern = '.|.'*(i+i-1 )  #Need something here...
+    pattern = '.|.'*(i+i-1 ) 
     print(pattern.center(int(m),'-'))
+
+# Method #2:
+n, m = input().split()
+Top = []
+for i in range(1, (int(n)//2)+1):
+    pattern = '.|.'*(i+i-1)
+    Top.append(pattern.center(int(m),'-'))
+print('\n'.join(Top))
+print('WELCOME'.center(int(m),'-'))
+print('\n'.join(Top)[::-1])
