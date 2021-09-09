@@ -34,7 +34,7 @@ if __name__ == '__main__':
     n = int(input())
     integer_list = map(int, input().split())
     # print(n, integer_list)
-    list1 = [i for i in range(1, n+1)]
+    list1 = [int(i) for i in range(1, n+1)]
     T= tuple(list1)
     print(hash(T))
 #  (as a list is not hashable, but a tuple is)
