@@ -51,7 +51,7 @@ if __name__ == '__main__':
             lis.remove(int(s[1]))
         if s[0]=="append":
             lis.append(int(s[1]))
-        if s[0]=="sort":
+        if s[0]=="sort": 
             lis.sort()
         if s[0]=="pop":
             lis.pop() 
