@@ -57,4 +57,4 @@ if __name__ == '__main__':
             lis.pop() 
         if s[0]=="reverse": 
             lis.reverse() 
-
+ 
