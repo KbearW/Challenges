@@ -34,3 +34,4 @@ fptr.write('\n'.join([' '.join(x) for x in result]))
 # fptr.write('\n')
 
 fptr.close() 
+ 
