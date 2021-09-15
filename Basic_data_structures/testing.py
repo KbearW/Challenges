@@ -30,7 +30,7 @@ fptr = open('empty.txt', 'w')
 
 result = [('words', '1'), ('count', '3'), ('the', '2')]
 # fptr.write([' '.join(x) for x in result])
-fptr.write('\n'.join([' '.join(x) for x in result]))
+fptr.write('\n'.join([' '.join(x) for x in result])) 
 # fptr.write('\n')
 
 fptr.close() 
