@@ -14,3 +14,6 @@ def minimumBribes(q):
     print(count)
 
 minimumBribes([1,2,5,3,7,8,6,4])
+
+
+# This soluation is off by one....
