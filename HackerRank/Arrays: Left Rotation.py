@@ -65,7 +65,7 @@ def rotLeft(a, d):
     # how does the list move around the inputs?
     
     res = []
-    res.extend(a[d:])    
+    res.extend(a[d:])     
     res.extend(a[:d])
     return res
     
