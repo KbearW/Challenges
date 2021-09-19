@@ -8,7 +8,7 @@ def minimumBribes(q):
         if q[i] - (i+1) > 2:
             print('Too chaotic')
             return  #this return is needed to provent keep looping over to the next print
-        if q[i] - (i+1) > 0:
+        if q[i] - (i+1) > 0: 
             if q[i] - (i+1) == 1 or q[i] - (i+1) == 2:  
                 count += q[i] - (i +1)
     print(count) 
