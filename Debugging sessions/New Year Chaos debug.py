@@ -11,7 +11,7 @@ def minimumBribes(q):
         if q[i] - (i+1) > 0:
             if q[i] - (i+1) == 1 or q[i] - (i+1) == 2:  
                 count += q[i] - (i +1)
-    print(count)
+    print(count) 
 
 minimumBribes([1,2,5,3,7,8,6,4])
 
