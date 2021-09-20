@@ -31,7 +31,7 @@ def minimum_bribes(q):
             print(q[max(char - 1, 0):i])
 
             if k > char:
-                bribes += 1
+                bribes += 1 
 
     print(bribes)
 
