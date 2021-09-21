@@ -62,6 +62,7 @@ for list:
 list.pop(index) is okay  
 list.insert(index,'newitem')--> return None/ can insert tuples / can't take negative index
 If you want to return the list --> use the + method
+list.remove(num) will remove the value num from list
 
 
 Don't use pop with iteration, the indexing will be off bc it has been popped!
