@@ -23,7 +23,7 @@ def find_largest_smaller_than(nums, xnum):
 
     # Fail-fast optimization: since our list is sorted, if the first number
     # is bigger, a smaller number isn't in our list
-    # sorted list--> bisect library
+    # sorted list--> bisect library/ binary search!
 
     # bisect_left--> when item match, insert the INDEX of the left of the first exact match 
     # bisert_right --> when item match, insert the INDEX of the right of the last exact match 
