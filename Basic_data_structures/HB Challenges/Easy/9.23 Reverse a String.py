@@ -6,10 +6,13 @@
 # iterate over the string and use slice method to rebuild a word, runtime: O(n**2), space: O(n)
 
 def rev_string(word):
-    res = ''
-    for i in range(len(word)+1):
-        res += word[-(i+1)]
-    return res
+    '''reverse the string given. cannot use reverse or reversed()'''
+    res = '' 
+
+    for i in range(len(word),0,-1):
+        # print(i)
+        res += word[i-1]
+    return res  
 
 words = ['porcupine','Abc',[]]
 for word in words:
