@@ -9,6 +9,7 @@ def search (arr, target):
         # print(mid)
 
         if mid == target:
+            steps += 1
             return steps
 
         if target < mid:
@@ -23,6 +24,6 @@ def search (arr, target):
     
     return -1
 
-arr = [x for x in range(21)]
+arr = [x for x in range(41)]
 # print(arr)
-print(search(arr, 7))
+print(search(arr, 20))
