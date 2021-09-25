@@ -6,7 +6,8 @@ def decode(word):
         # print(char)
         if char.isnumeric():
             # print(i, int(char))
-            res.append(word[int(char)+i+1])
+            skip = int(char)
+            res.append(word[skip+i+1])
     return ''.join(res)
 
 words = ["0h", "2abh", "0h1ae2bcy"]
