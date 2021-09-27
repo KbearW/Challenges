@@ -20,7 +20,7 @@ def cipher(phrase, shift):
                     res.append(alpha[i+shift])
                 
     return ''.join(res)
-
+ 
 phrase = 'dsDFgf'
 print(cipher(phrase,4))
 
