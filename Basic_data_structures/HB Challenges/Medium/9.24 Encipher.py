@@ -16,10 +16,12 @@ def cipher(phrase, shift):
                 # print(letter)
                 if letter.isupper():
                     res.append(alpha[i+shift].upper())    
-                else:
+                else: 
                     res.append(alpha[i+shift])
                 
     return ''.join(res)
 
 phrase = 'dsDFgf'
 print(cipher(phrase,4))
+
+# Runtime: 27n
