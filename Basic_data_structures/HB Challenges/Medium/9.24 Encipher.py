@@ -13,7 +13,7 @@ def cipher(phrase, shift):
             # print(letter)
             if char == letter.lower():
                 # print(alpha[i+shift])
-                # print(letter)
+                # print(letter) 
                 if letter.isupper():
                     res.append(alpha[i+shift].upper())    
                 else: 
