@@ -23,7 +23,7 @@ def selectionsort(A):
     return A
 
 
-print(selectionsort([6,3,2,5]))
+# print(selectionsort([6,3,2,5]))
 # res should be [2,3,5,6]
 
 
@@ -43,7 +43,30 @@ def selectionsortlargesttosmallest(array):
     #     swap the item
     return array
 
-print(selectionsortlargesttosmallest([6,3,2,5]))
+# print(selectionsortlargesttosmallest([6,3,2,5]))
 # res should be [6,5,3,2]
 
+# LC 922
+# https://leetcode.com/explore/challenge/card/september-leetcoding-challenge-2021/639/week-4-september-22nd-september-28th/3990/
+
+# def sortArrayByParityII(nums):
     
+#     # iterate over the length of the array
+#     for i in range(len(nums)):
+#     #     set curr = current item
+#         even = i
+#         odd = i+1
+#     #     iterate over the remainder array
+#         for j in range(i+1, len(nums)):
+#     #         if the index is even:
+#             if (i+1) %2 != 0:
+#                 # if num is even
+#                 if nums[j] != 0:
+#                     curr = j
+#             nums[curr], nums[i] = nums[i], nums[curr]
+#     return nums
+
+# # print(sortArrayByParityII([3,4]))
+# # print(sortArrayByParityII([4,1,2,1]))
+# print(sortArrayByParityII([4,2,5,7]))
+# # res should be [4,7,2,5], [2,5,4,7], [2,7,4,5]
