@@ -6,8 +6,13 @@
 # This method is very similar to Selection sort in that selection sort scan from L -> R and direct swap
 # while bubble sort starts from R -> L and keep swapping the smallest item towards the L.
 
+# *red is a pointer from R -> L
+# Runtime: O(n**2)
+# Space: O(n)
+
 # sudo code:
     # for i in 0 to (n-1):
+    # (note for it's only until (n-1) bc the last item is already sorted by default)
     #     for red in (n-1) down to (i+1):
     #         if A[red-1] > A[red]:
     #             swap A[red-1], A[red]
