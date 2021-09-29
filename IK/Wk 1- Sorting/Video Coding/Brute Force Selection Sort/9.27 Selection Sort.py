@@ -1,8 +1,5 @@
 '''based on sudo code given, code the select sort algo out'''
 
-from abc import abstractproperty
-
-
 def selectionsort(A):
     '''given a list of element, sort the list, A is the list of element'''
     # The result would already be in the final position. 
