@@ -18,3 +18,15 @@
     #             swap A[red-1], A[red]
     # return A
 
+def bubblesort(input):
+    for i in range(len(input)-1):
+        # print(i)
+        for j in range(len(input)-1, 0, -1):
+            # print(input[j-1], input[j])
+            if input[j-1] > input[j]:
+                input[j-1], input[j] = input[j], input[j-1]
+    return input
+
+input = [7,4,2,6,9]
+print(bubblesort(input))
+# res should be [2,4,6,7,9]
