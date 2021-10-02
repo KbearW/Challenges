@@ -35,5 +35,6 @@
     # helper(A, 0, len(A)-1)
     # return A
 
-# Runtime: O(log n)
-# Space: ?
+# Runtime: O(n log n)
+# Space: req extra memory - O(n)
+
