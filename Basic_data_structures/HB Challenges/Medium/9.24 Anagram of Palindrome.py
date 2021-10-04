@@ -13,8 +13,7 @@ def is_anagram_of_palindrome(word):
     length = len(word)
     count = {}
     for char in word:
-        count[char] = count.get(char, 0) + 1
-    
+     
     seen_an_odd = False
 
     for v in count.values():
