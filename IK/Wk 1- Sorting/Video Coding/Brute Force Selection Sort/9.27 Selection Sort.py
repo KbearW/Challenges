@@ -1,4 +1,7 @@
-'''based on sudo code given, code the select sort algo out'''
+'''
+Decrease and conquer- Selection Sort
+based on sudo code given, code the select sort algo out
+'''
 
 def selectionsort(A):
     '''given a list of element, sort the list, A is the list of element'''

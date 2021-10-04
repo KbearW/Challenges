@@ -1,4 +1,7 @@
-'''sort the given array and perform an insertion sort'''
+'''
+Decrease and conquer- Insertion Sort
+
+sort the given array and perform an insertion sort'''
 # sudo code
 # iterate over the whole arr from 0 to n-1 position. (Last position will be already sorted automatically)
 # for i in (0, n-1):

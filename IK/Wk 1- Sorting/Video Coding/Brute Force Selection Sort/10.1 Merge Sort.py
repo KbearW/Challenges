@@ -1,3 +1,11 @@
+'''
+Divide and Conquer - Merge Sort
+Divide/ Solve/ Combine
+
+Merge Sort:
+Runtime: O(n log n)
+Space: O()
+'''
 # function helper(A, start, end):
 
 # # Leaf worker--> aka- base case
