@@ -21,7 +21,7 @@ def is_anagram_of_palindrome(word):
             if seen_an_odd:
                 return False
         seen_an_odd = True
-    return True
+    return True 
 
 
 words = ['a','ab','aab','arceace','arceaceb']
