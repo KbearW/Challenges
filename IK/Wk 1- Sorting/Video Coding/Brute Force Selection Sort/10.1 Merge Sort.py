@@ -15,7 +15,7 @@ def helper(A, start, end):
 # This line caused: RecursionError: maximum recursion depth exceeded
     if start == end:
         return
-
+ 
 # # Internal node worker
 # mid = (start + end)/2
     mid = (start + (end - start))/2
