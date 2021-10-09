@@ -4,13 +4,15 @@ Divide/ Solve/ Combine
 
 Merge Sort:
 Runtime: O(n log n)
-Space: O()
+Space: O() 
 '''
 # function helper(A, start, end):
 def helper(A, start, end):
 # # Leaf worker--> aka- base case
 # if start == end:
 #     return 
+
+# This line caused: RecursionError: maximum recursion depth exceeded
     if start == end:
         return
 
