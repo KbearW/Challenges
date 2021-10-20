@@ -1,4 +1,6 @@
-# BFS, Runtime: O(n), Space: O(n)
+# BFS, 
+# Runtime: O(n)
+# Space: O(n) 
 import collections
 def level_order_traversal(root):
 
@@ -13,6 +15,7 @@ def level_order_traversal(root):
         temp = []
         numnodes = len(q)
         for _ in range(numnodes):
+            # O(1) since it's limited to the # of nodes
             node = q.popleft()
             if node.left_ptr is not None:
                 q.append(node.left_ptr)
