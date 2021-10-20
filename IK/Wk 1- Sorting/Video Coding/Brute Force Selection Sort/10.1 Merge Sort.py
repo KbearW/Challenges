@@ -16,7 +16,7 @@ def helper(A, start, end):
     if start == end:
         return
  
-# # Internal node worker 
+# # Internal node worker  
 # mid = (start + end)/2
     mid = (start + (end - start))/2
 # helper(A, start, mid)
