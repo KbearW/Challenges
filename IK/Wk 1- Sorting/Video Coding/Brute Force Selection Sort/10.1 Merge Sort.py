@@ -13,7 +13,7 @@ def helper(A, start, end):
 #     return 
 
 # This line caused: RecursionError: maximum recursion depth exceeded
-    if start == end:
+    if start == end: 
         return
  
 # # Internal node worker  
