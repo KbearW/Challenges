@@ -1,5 +1,4 @@
-# BFS, Runtime: O(n), Space: O(n)
-import collections
+# BFS
 def level_order_traversal(root):
 
     res = []   
