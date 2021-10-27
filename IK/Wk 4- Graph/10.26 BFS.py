@@ -29,6 +29,7 @@ def number_of_connected_components(n, edges):
                     visited[neighbor] = 1
                     q.append(neighbor)
         
+        # Count # of items 
     items = 0
     for v in range(n):
         if visited[v] == -1:
