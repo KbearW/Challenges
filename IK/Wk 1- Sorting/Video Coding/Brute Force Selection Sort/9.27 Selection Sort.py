@@ -6,16 +6,16 @@ based on sudo code given, code the select sort algo out
 def selectionsort(A):
     '''given a list of element, sort the list, A is the list of element'''
     # The result would already be in the final position. 
-    # runtime: O(n) 
-    # Space: O(n)
-    # *len(A)-1 for iteration bc the last item is already presorted!
-    for i in range(0,len(A)-1):  # 0,1,2,3
+    # runtime: O(n**2) 
+    # Space: O(1) 
+    # *len(A)-1 for iteration bc the last item is already presorted per setup!
+    for i in range(len(A)-1):  # 0,1,2,3
         # For position i
         # find the ith smallest elemt and swap wi with A[i]
         min = i
         # for selection of the elem/ counter shift
         # i+1 bc it doesn't need to loop thur the beginning of the range as it has been sorted already!
-        for j in range(i+1,len(A)-1):  # 1,2,3,4
+        for j in range(i+1,len(A)):  # 1,2,3,4
             # comparison
             if A[min] > A[j]:
                 min = j
@@ -30,7 +30,7 @@ def selectionsort(A):
 
 def selectionsortlargesttosmallest(array):
     '''given a list of element, sort the list and the largest elem to the left- aka, smallest to the right of the list'''
-    for i in range(len(array)):
+    for i in range(len(array)-1):
     # start w the left most position and iterate over the array
         max = i
     #     setup max
@@ -44,27 +44,34 @@ def selectionsortlargesttosmallest(array):
     #     swap the item
     return array
 
-# print(selectionsortlargesttosmallest([6,3,2,5]))
+print(selectionsortlargesttosmallest([6,3,2,5]))
 # res should be [6,5,3,2]
 
 # LC 922
 # https://leetcode.com/explore/challenge/card/september-leetcoding-challenge-2021/639/week-4-september-22nd-september-28th/3990/
 
 # def sortArrayByParityII(nums):
-    
-#     # iterate over the length of the array
-#     for i in range(len(nums)):
-#     #     set curr = current item
-#         even = i
-#         odd = i+1
-#     #     iterate over the remainder array
-#         for j in range(i+1, len(nums)):
-#     #         if the index is even:
-#             if (i+1) %2 != 0:
-#                 # if num is even
-#                 if nums[j] != 0:
-#                     curr = j
-#             nums[curr], nums[i] = nums[i], nums[curr]
+        
+#         This code works but time limit exceeded bc it's based on selection sort method, which is slow by itself
+# Should use the 2 pointers approach
+
+#     for i in range(len(nums)-1):
+#         if i % 2 == 0 and nums[i] % 2 != 0: #index == even and num == odd
+#             # find the next even num
+#             # print('yes')
+#             for j in range(i, len(nums)):
+#                 if nums[j] % 2 == 0:
+#                     # swap w the next even num
+#                     nums[i], nums[j] = nums[j], nums[i]
+#                     # print(nums[i], nums[j])
+#         elif i % 2 != 0 and nums[i] % 2 == 0: #index == odd and num == eve
+# #                     find the next odd num
+#             for j in range(i, len(nums)):
+#                 if nums[j] % 2 != 0:
+#                     # swap w the next num
+#                     nums[i], nums[j] = nums[j], nums[i]
+#                     # print(nums[i], nums[j])
+                
 #     return nums
 
 # # print(sortArrayByParityII([3,4]))
