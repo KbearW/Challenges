@@ -8,13 +8,14 @@ def selectionsort(A):
     # The result would already be in the final position. 
     # runtime: O(n) 
     # Space: O(n)
-    for i in range(0,len(A)):  # 0,1,2,3
+    # *len(A)-1 for iteration bc the last item is already presorted!
+    for i in range(0,len(A)-1):  # 0,1,2,3
         # For position i
         # find the ith smallest elemt and swap wi with A[i]
         min = i
         # for selection of the elem/ counter shift
         # i+1 bc it doesn't need to loop thur the beginning of the range as it has been sorted already!
-        for j in range(i+1,len(A)):  # 1,2,3,4
+        for j in range(i+1,len(A)-1):  # 1,2,3,4
             # comparison
             if A[min] > A[j]:
                 min = j
