@@ -1,7 +1,8 @@
 '''
 Decrease and conquer- Bubble Sort
 
-based on sudo code given, code the select sort algo out'''
+based on sudo code given, code the select sort algo out
+THIS METHOD is WORSE than selection sort'''
 
 # Bubble sort: iterate over the array, then starts from R to L to find the smallest # and keep moving it alone
 # "Bubble up" in a way
