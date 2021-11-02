@@ -29,13 +29,17 @@ sort the given array and perform an insertion sort'''
 # Note: the while loop introduce runtime variability
 
 def insertionsort(A):
-    for i in range(0,len(A)-1):
+    for i in range(len(A)):
+        # must setup temp as a number rather than an index bc the array will change overtime
         temp = A[i]
-        red = i-1
-        while red >= 0 and A[red] > temp:
-            A[red + 1] = A[red]
-            red -= 1
-        A[red + 1] = temp
+        prev = i-1
+        while prev >= 0 and A[prev] > temp:
+            # shift the number over, it can be listed as A[i] or A[prev + 1]
+            A[prev + 1] = A[prev]
+            # move prev along
+            prev -= 1
+        # As this point, prev is in the incorrect index bc of L40, therefore, need to shift it back to the correct index --> by '+1'
+        A[prev + 1] = temp
     return A
 
 A= [4,6,7,3,8]
