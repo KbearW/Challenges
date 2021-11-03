@@ -59,7 +59,7 @@ def helper(A, start, end):
 
 # //copy over the elem in aux to the original list
 # A[start...end] 
-    A = res
+    A = res[:]
 
 # Original worker:
 # function mergesort(A):
@@ -67,7 +67,7 @@ def helper(A, start, end):
     # return A
 
 def mergesort(A):
-    helper(A, 0, len(A)-1)
+    helper(A, A[0], A[-1])
     return A
 # Runtime: O(n log n)
 # Space: req extra memory - O(n)
