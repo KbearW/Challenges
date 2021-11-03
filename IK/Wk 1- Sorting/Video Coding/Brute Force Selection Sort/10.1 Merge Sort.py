@@ -6,69 +6,47 @@ Merge Sort:
 Runtime: O(n log n)
 Space: O() 
 '''
-# function helper(A, start, end):
-def helper(A, start, end):
-# # Leaf worker--> aka- base case
-# if start == end:
-#     return 
-
-# This line caused: RecursionError: maximum recursion depth exceeded 
-    if start == end: 
-        return
- 
-# # Internal node worker  
-# mid = (start + end)/2
-    mid = (start + (end - start))/2
-# helper(A, start, mid)
-# helper(A, mid+1, end)
-    helper(A, start, mid)
-    helper(A, mid+1, end)
-# //merge the two sorted halves
-# i = start, j = mid + 1
-    i, j = start, mid +1
-# aux = an empty away of size (end-start+1)
-    res = []
-# while i < = mid and j <= end:
-    while i <= mid and j <= end:
-#     if A[i] <= A[j]:
-        if A[i] <= A[j]:
-#         aux.append(A[i])
-            res.append(A[i])
-#         i += 1
-            i += 1
-#     else: //A[i]>A[j]
-        else:
-#         aux.append(A[j])
-            res.append(A[j])
-#         j += 1
-            j += 1
-# //Gather phase
-# while i <= mid:
-    while i <= mid:
-#     aux.append(A[i])
-        res.append(A[i])
-#     i += 1
-        i += 1
-
-# while j <= end:
-    while j <= end:
-#     aux.append(A[j])
-        res.append(A[j])
-#     j += 1
-        j +=1
-
-# //copy over the elem in aux to the original list
-# A[start...end] 
-    A = res[:]
-
-# Original worker:
-# function mergesort(A):
-    # helper(A, 0, len(A)-1)
-    # return A
-
 def mergesort(A):
-    helper(A, A[0], A[-1])
+    
+    def helper(A, start, end):
+        # Base case
+        if start == end:
+            return 
+
+        # internal node
+        mid = int((start+end)/2)
+        helper(A, start, mid)
+        helper(A, mid+1, end)
+        i = start
+        j = mid +1
+        res = []
+        # print(mid, i, j)
+
+        while i <= mid and j <= end:
+            if A[i] <= A[j]:
+                res.append(A[i])
+                i += 1
+            else:
+                # A[i] > A[j]:
+                res.append(A[j])
+                j += 1
+
+        # Gather phrase
+        while i <= mid:
+            res.append(A[i])
+            i += 1
+        while j <= end:
+            res.append(A[j])
+            j += 1
+            
+        print(res)
+
+        # copy the elements from the aux array back into the original subarray
+        A[start:end+1] = res
+
+    helper(A, 0, len(A)-1)
     return A
+    
 # Runtime: O(n log n)
 # Space: req extra memory - O(n)
 
