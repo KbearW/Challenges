@@ -13,31 +13,33 @@ average runtime: O(nlog n)
 
 '''Lomuto's'''
 
-# Sudo Code:
-# part 1: divide
-# function helper(A, start, end):
-#     # Leaf worker
-#     if start >= end:
-#         return
+import random
+def quicksort_lomuto(A):
+    def helper(A, start, end):
+        if start >= end:
+            return
 
-#     # internal node worker
-                            # <-- Lomuto's code -->
+        pindex = random.randint(start, end)
+        A[pindex], A[start] = A[start], A[pindex]
+        orange = start
+        for green in range(start+1, end+1):
+            print(start, A[start])
+            print(green, A[green])
+            print(orange, A[orange])
+            if A[green] < A[start]:
+                orange += 1
+                A[green], A[orange] = A[orange], A[green]
+        A[start], A[orange] = A[orange], A[start]
 
-#     small = start <-- pick a random element to avoid the worse case (skewed)-- aka sorted list 
+        helper(A, start, orange-1)
+        helper(A, orange+1, end)
+
+    helper(A, 0, len(A)-1)
+    return nums
     
-#     Do this... Randomized algorithm
-#     privotindex = a random int in range(start, end+1)
-#     swap A[pivotindex], A[start]
+nums = [4,3,9,10,2,6]
+quicksort_lomuto(nums, 0, len(nums)-1)
 
-#     for bigger in start +1 to end:
-#         if A[bigger] < A[start]:
-#             smaller ++
-#             swap A[smaller], A[bigger]
-#     swap A[start], A[smaller]
-
-#     helper(A, start, smaller -1)
-#     helper(A, smaller + 1, end)
-                            # <-- end of Lomuto's code -->
 # # Part 2: conquer
 # function quicksort(A):
 #     helper(A, 0, length(A)-1)

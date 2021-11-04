@@ -4,7 +4,7 @@ Divide/ Solve/ Combine
 
 Merge Sort:
 Runtime: O(n log n)
-Space: O() 
+Space: O(n) 
 '''
 def mergesort(A):
     
