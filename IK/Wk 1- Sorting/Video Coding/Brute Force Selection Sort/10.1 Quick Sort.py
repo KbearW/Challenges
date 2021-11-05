@@ -64,12 +64,15 @@ quicksort_lomuto(nums, 0, len(nums)-1)
                     
 
 
+import random
 def quicksort_hoares(A):
     ''' One pointer at the beginning of the list, one at the end'''
 
     def helper(A, start, end):
         if start >= end:
             return
+        pindex = random.randint(start, end)
+        A[pindex], A[start] = A[start], A[pindex]
 
         orange = start + 1
         green = end
