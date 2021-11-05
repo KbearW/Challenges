@@ -88,7 +88,7 @@ def quicksort_hoares(A):
         helper(A, green +1, end)
 
     helper(A, 0, len(A)-1)
-    return nums
+    return A
     
 nums = [4,3,9,10,2,6]
 quicksort_hoares(nums)
