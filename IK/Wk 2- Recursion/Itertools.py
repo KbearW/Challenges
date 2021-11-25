@@ -6,7 +6,7 @@ A = list(itertools.product(letter, repeat = 2))
 print(f'product is {len(A)} and {A}')
 
 # This removes dups - ie. (A,A), (B,B), (C,C), (D,D)
-B = list(itertools.permutations(letter, 2))
+B = list(itertools.permutations(letter, 2)) 
 print(f'permutations is  {len(B)} and {B}')
 
 # This removes all dups and order doesn't matter - ie. (A,A)... and (A,B)/(B,A) pair
