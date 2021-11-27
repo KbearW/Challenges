@@ -1,3 +1,5 @@
+#~~~~~~~~~~~ With repetitions ~~~~~~~~~~~~~~~~~
+
 # Both BFS methods will have same result... 
 # under BFS method: Runtime is O(2**n)*n and space is O(2**n)
 # DFS is always better bc of O(n) space
@@ -31,4 +33,3 @@ def binarystrings(n):
 print(binarystrings(3))
 # ['000', '001', '010', '011', '100', '101', '110', '111']
 
-# 
