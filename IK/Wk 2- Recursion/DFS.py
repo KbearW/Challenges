@@ -9,7 +9,7 @@
 # recursive method
 # For int
 
-def binarystrings(n):
+def binaryint(n):
     res = []
     def bshelper(slate,n):
         if n == 0:
@@ -20,14 +20,14 @@ def binarystrings(n):
     bshelper("", n)
     return res
 
-binarystrings(3)
+binaryint(3)
 # ['000', '001', '010', '011', '100', '101', '110', '111']
 
 '''_________________________________________________________________'''
 # For int
 
 # This is flexible and can run thu a range... slight modification
-def binarystrings_int(n):
+def binaryint2(n):
     res = []
     def bshelper(slate,n):
         if n == 0:
@@ -39,13 +39,13 @@ def binarystrings_int(n):
     bshelper("", n)
     print(res)
     return res
-binarystrings_int(2)
+binaryint2(2)
 # ['00', '01', '10', '11', '20', '21']
 
 '''_________________________________________________________________'''
 # For strings
 
-def binarystrings_str(n):
+def binarystrings(n):
     res = []
     # Make a copy of the input for referrence
     input = n[:]
@@ -64,7 +64,7 @@ def binarystrings_str(n):
     return res
 
 arr = ['a','b']
-binarystrings_str(arr)
+binarystrings(arr)
 # ['aa', 'ab', 'ba', 'bb']
 
 '''_________________________________________________________________'''
