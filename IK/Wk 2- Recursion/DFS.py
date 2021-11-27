@@ -7,19 +7,7 @@
 # subfunction can assess variable in the global scope
 
 # recursive method
-def binarystrings(n):
-    res = []
-    def bshelper(slate,n):
-        if n == 0:
-            res.append(slate)
-        else:
-            bshelper(slate + '0', n-1)
-            bshelper(slate + '1', n-1)
-    bshelper("", n)
-    return res
-
-binarystrings(3)
-# ['000', '001', '010', '011', '100', '101', '110', '111']
+# For int
 
 def binarystrings(n):
     res = []
@@ -34,6 +22,9 @@ def binarystrings(n):
 
 binarystrings(3)
 # ['000', '001', '010', '011', '100', '101', '110', '111']
+
+'''_________________________________________________________________'''
+# For int
 
 # This is flexible and can run thu a range... slight modification
 def binarystrings_int(n):
@@ -50,6 +41,9 @@ def binarystrings_int(n):
     return res
 binarystrings_int(2)
 # ['00', '01', '10', '11', '20', '21']
+
+'''_________________________________________________________________'''
+# For strings
 
 def binarystrings_str(n):
     res = []
@@ -73,8 +67,11 @@ arr = ['a','b']
 binarystrings_str(arr)
 # ['aa', 'ab', 'ba', 'bb']
 
+'''_________________________________________________________________'''
 
 #~~~~~~~~~~~ Without repetitions ~~~~~~~~~~~~~~~~~
+# For int:
+
 def binarystrings_wo_repetitions_int(n):
     res = []
     def bshelper(slate,n):
@@ -92,6 +89,8 @@ def binarystrings_wo_repetitions_int(n):
 binarystrings_wo_repetitions_int(2)
 # ['00', '10']
 
+'''_________________________________________________________________'''
+# For Strings
 
 def permutations_wo_repetitions_str(n):
     res = []
