@@ -130,5 +130,5 @@ def permutations_wo_repetitions_str(n):
     bshelper("", n)
     print(res)
     return res
-permutations_wo_repetitions_str(['a','b','c'])
+permutations_wo_repetitions_str(['abc'])
 # ['abc', 'acb', 'bac', 'bca', 'cab', 'cba']
