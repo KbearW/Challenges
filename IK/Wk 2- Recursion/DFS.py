@@ -9,6 +9,8 @@ subfunction can assess variable in the global scope
 Note: when the result asks to be a 2D array, slate/ temp needs to be an array as the inner unit.
 Otherwise, it will fail the test cases.
 
+# Time: O(2**n) <=> O(brench)**height
+# Space: O(n) <=> O(height)
 '''
 # recursive method
 # For int
@@ -151,7 +153,9 @@ def permutations_wo_repetitions_str(n):
 permutations_wo_repetitions_str(['abc'])
 # ['abc', 'acb', 'bac', 'bca', 'cab', 'cba']
 
-''' This is the best solution for the classic permutation problem: instead of slicing the string, swap it to save space!'''
+''' This is the best solution for the classic permutation problem: instead of slicing the string, swap it to save space!  
+# Time: O(2**n) <=> O(brench)**height
+# Space: O(n) <=> O(height)'''
 def perm(words):
     res = []
     # This step is to split letters into individual string for easy access later
