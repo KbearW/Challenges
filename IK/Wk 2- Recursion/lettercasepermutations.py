@@ -3,6 +3,7 @@
 # B/c we can skip creating new string each time.
 # Time: O(2**n) <=> O(brench)**height
 # Space: O(n) <=> O(height)
+# DFS
 
 def function(array):
     res = []
