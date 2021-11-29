@@ -1,6 +1,8 @@
 # This starts the fill from the left of the array.
 # Note this uses mutable data structure by setting temp as an [] rather than a '', this helps to improve the space.
 # B/c we can skip creating new string each time.
+# Time: O(2**n) <=> O(brench)**height
+# Space: O(n) <=> O(height)
 
 def function(array):
     res = []
