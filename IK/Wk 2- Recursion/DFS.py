@@ -1,11 +1,15 @@
 #~~~~~~~~~~~ With repetitions --> ie. Binary / Decimal strings ~~~~~~~~~~~~~~~~~
+'''
+All DFS will have runtime = O(2**n)n  and space = O(n), always recursive
+DFS will perform most work upfront. (unlike BFS- which perfom most of the work at the very end.)
 
-# All DFS will have runtime = O(2**n)n  and space = O(n), always recursive
-# DFS will perform most work upfront. (unlike BFS- which perfom most of the work at the very end.)
+This method will return a list of all items
+subfunction can assess variable in the global scope
 
-# This method will return a list of all items
-# subfunction can assess variable in the global scope
+Note: when the result asks to be a 2D array, slate/ temp needs to be an array as the inner unit.
+Otherwise, it will fail the test cases.
 
+'''
 # recursive method
 # For int
 
@@ -88,6 +92,26 @@ def binarystrings_wo_repetitions_int(n):
     return res
 binarystrings_wo_repetitions_int(2)
 # ['00', '10']
+
+def binarystrings_wo_repetitions_int2(n):
+    res = []
+    def bshelper(slate,n):
+        if n == 0:
+            res.append(slate)
+        else:
+            for i in range(n):
+                slate += [n[i]]
+                arr2 =  n - 1
+                print(arr2)
+                bshelper(slate + str(i), arr2)
+                slate.pop()
+                # bshelper(slate + '1', n-1)
+    bshelper([], n)
+    print(res)
+    return res
+binarystrings_wo_repetitions_int2(2)
+# [['00'], ['10']]
+
 
 '''_________________________________________________________________'''
 # For Strings
