@@ -1,22 +1,22 @@
 def subsets(arr):
     res = []
-    def helper(i, temp, S):
+    def helper(i, temp):
         # base case
-        print(f'temp is: {temp}, temp.len: {len(temp)}, i is {i}')
-        # print(i)
         if len(arr) == i:
             res.append(''.join(temp))
             return
+
         # inner node
         else:
             # incl
-            helper(i+1, temp, S[i+1:])
+            helper(i+1, temp)
+
             # excl
             temp.append(arr[i])
-            helper(i+1, temp, S[i+1:])
+            helper(i+1, temp)
             temp.pop()
             
-    helper(0,[''], arr)
+    helper(0,[''])
     return res
     
 print(subsets('ab'))
