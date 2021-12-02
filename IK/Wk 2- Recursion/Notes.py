@@ -35,5 +35,9 @@ for DFS: O(n)
 
 In general, DFS works best!
 
+For the base case:
+For perm: bc all the res has the same length, we'll set base case as len(input) = len(temp)
+    for simnple perm case, we can get away from using slate/ temp and use string slicing
+For subset: bc the res has diff length, we need to use temp and set the base case as len(input) == i!
 
 '''
