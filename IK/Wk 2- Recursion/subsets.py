@@ -1,4 +1,5 @@
 def subsets(arr):
+    # for subsets- we are returning diff length of the input, that's why we HAVE to use temp/ slate
     res = []
     def helper(i, temp):
         # base case
@@ -8,10 +9,10 @@ def subsets(arr):
 
         # inner node
         else:
-            # incl
+            # excl
             helper(i+1, temp)
 
-            # excl
+            # incl
             temp.append(arr[i])
             helper(i+1, temp)
             temp.pop()
