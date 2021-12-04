@@ -31,3 +31,22 @@ def reversestring_immutable(string):
     return helper(0)
 print(reversestring_immutable(['a','b','c','d']))
 # 'dcba'
+
+# Note the diff on input list btw the code above and below! One is an array, one is a string. 
+# For the one w string, should split it back into an array before the code can swap assignment
+
+def reversestring_immutable(string):
+    string = [letter for letter in string]
+    print(string)
+    def helper(i):
+        
+        n = len(string)
+        for i in range(n//2):
+            print(i)
+            # swap:
+            string[i], string[n-1-i] = string[n-1-i], string[i]
+        
+        return ''.join(string)
+            
+    return helper(0)
+print(reversestring_immutable('abcd'))
