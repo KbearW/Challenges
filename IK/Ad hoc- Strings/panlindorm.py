@@ -1,8 +1,8 @@
 def palindorm(A):
     j = len(A)-1
     
-    for idx in range(len(A)//2):    
-        if A[idx] != A[j]:
+    for i in range(len(A)//2):    
+        if A[i] != A[j]:
             return False
         else:
             j -= 1
