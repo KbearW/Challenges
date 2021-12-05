@@ -9,3 +9,4 @@ def palindorm(A):
     return True
         
 print(palindorm('abcdcba'))
+
