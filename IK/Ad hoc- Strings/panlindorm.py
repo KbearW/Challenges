@@ -1,3 +1,4 @@
+# What's the time, space? O(n)?
 def palindorm(A):
     j = len(A)-1
     

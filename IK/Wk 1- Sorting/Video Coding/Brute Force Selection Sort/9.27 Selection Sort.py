@@ -29,7 +29,8 @@ def selectionsort(A):
 
 
 def selectionsortlargesttosmallest(array):
-    '''given a list of element, sort the list and the largest elem to the left- aka, smallest to the right of the list'''
+    '''given a list of element, sort the list and the largest elem to the left- aka, 
+    smallest to the right of the list'''
     for i in range(len(array)-1):
     # start w the left most position and iterate over the array
         max = i
