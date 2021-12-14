@@ -1,7 +1,7 @@
 def prime(v):
     res = []
     # the num list should starts from 2 b/c 0, 1 are not prime!
-    
+    # mod is looking at the remainder!
     for i in range(2, v+1):
         for j in range(2, i):
         # for/else loop is need here to catch all things that fail
